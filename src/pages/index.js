@@ -1,10 +1,22 @@
-import React from "react";
+import React from 'react';
+
+import GlobalStyles from 'theme/globalStyles';
+
+import Hero from 'components/Hero/Hero';
+import Theme from 'theme/theme';
+import AboutMe from 'components/AboutMe/AboutMe';
+import Skills from 'components/Skills/Skills';
+import Portfolio from 'components/Portfolio/Portfolio';
 
 const IndexPage = () => {
   return (
-    <>
-      <h1>Hello world</h1>
-    </>
+    <Theme>
+      <GlobalStyles />
+      <Hero />
+      <AboutMe />
+      <Skills />
+      <Portfolio />
+    </Theme>
   );
 };
 
