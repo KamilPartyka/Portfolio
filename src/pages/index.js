@@ -7,6 +7,7 @@ import Theme from 'theme/theme';
 import AboutMe from 'components/AboutMe/AboutMe';
 import Skills from 'components/Skills/Skills';
 import Portfolio from 'components/Portfolio/Portfolio';
+import Footer from 'components/Footer/Footer';
 
 const IndexPage = () => {
   return (
@@ -16,6 +17,7 @@ const IndexPage = () => {
       <AboutMe />
       <Skills />
       <Portfolio />
+      <Footer />
     </Theme>
   );
 };

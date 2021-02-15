@@ -2,25 +2,42 @@ import styled from 'styled-components';
 
 export const StyledWrapper = styled.div`
   margin: 0;
-  height: 60px;
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+`;
+
+export const StyledListWrapper = styled.div`
+  padding: 3rem 2rem 0 0;
 `;
 
 export const StyledList = styled.ul`
   margin: 0;
-  padding: 10px;
+  padding: 1rem;
   list-style: none;
   display: flex;
   justify-content: space-around;
   align-items: center;
 
   li {
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 30px;
-    line-height: 35px;
+    padding-right: 5rem;
 
-    color: ${({ theme }) => theme.colors.white};
+    button {
+      border: none;
+      background-color: transparent;
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 3rem;
+      line-height: 3.5rem;
+      color: ${({ theme }) => theme.colors.white};
+      outline: none;
+      transition: color 200ms;
+
+      :hover {
+        cursor: pointer;
+        color: ${({ theme }) => theme.colors.yellow};
+      }
+    }
   }
 `;

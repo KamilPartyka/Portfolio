@@ -1,12 +1,16 @@
 import React from 'react';
 
+import Bevel from 'components/Bevel/Bevel';
+
 import { StyledWrapper } from './styled';
 
 const Skills = () => {
   return (
-    <StyledWrapper>
-      <h2>Skills</h2>
-    </StyledWrapper>
+    <>
+      <StyledWrapper id="skills">
+        <h2>Skills</h2>
+      </StyledWrapper>
+    </>
   );
 };
 

@@ -7,6 +7,7 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     'gatsby-plugin-resolve-src',
+    `gatsby-plugin-smoothscroll`,
     {
       resolve: 'gatsby-source-filesystem',
       options: {

@@ -1,15 +1,26 @@
 import React from 'react';
 
-import { StyledWrapper, StyledList } from './styled';
+import scrollTo from 'gatsby-plugin-smoothscroll';
+
+import { StyledWrapper, StyledListWrapper, StyledList } from './styled';
 
 const NavBar = () => {
   return (
     <StyledWrapper>
-      <StyledList>
-        <li>About me</li>
-        <li>Skills</li>
-        <li>Portfolio</li>
-      </StyledList>
+      <div />
+      <StyledListWrapper>
+        <StyledList>
+          <li>
+            <button onClick={() => scrollTo('#aboutMe')}>About me</button>
+          </li>
+          <li>
+            <button onClick={() => scrollTo('#skills')}>Skills</button>
+          </li>
+          <li>
+            <button onClick={() => scrollTo('#portfolio')}>Portfolio</button>
+          </li>
+        </StyledList>
+      </StyledListWrapper>
     </StyledWrapper>
   );
 };

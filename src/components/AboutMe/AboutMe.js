@@ -1,12 +1,17 @@
 import React from 'react';
 
+import Bevel from 'components/Bevel/Bevel';
+
 import { StyledWrapper } from './styled';
 
 const AboutMe = () => {
   return (
-    <StyledWrapper>
-      <h2>AboutMe</h2>
-    </StyledWrapper>
+    <>
+      <StyledWrapper id="aboutMe">
+        <h2>AboutMe</h2>
+      </StyledWrapper>
+      <Bevel reverse isNotFirst />
+    </>
   );
 };
 
