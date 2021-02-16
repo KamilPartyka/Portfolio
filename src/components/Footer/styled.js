@@ -6,7 +6,7 @@ export const StyledWrapper = styled.div`
 `;
 
 export const StyledFooter = styled.footer`
-  font-family: 'Cambo';
+  font-family: Cambo;
   font-style: normal;
   font-weight: normal;
   font-size: 36px;

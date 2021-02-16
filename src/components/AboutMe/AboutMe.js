@@ -10,7 +10,7 @@ const AboutMe = () => {
       <StyledWrapper id="aboutMe">
         <h2>AboutMe</h2>
       </StyledWrapper>
-      <Bevel reverse isNotFirst />
+      <Bevel />
     </>
   );
 };

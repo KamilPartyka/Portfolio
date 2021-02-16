@@ -37,7 +37,7 @@ const Hero = () => {
   const heroImg = data.heroImg.childImageSharp.fluid;
 
   return (
-    <BackgroundImage fluid={bgImage} backgroundColor={'#41A1B1'}>
+    <BackgroundImage id="hero" fluid={bgImage} backgroundColor={'#41A1B1'}>
       <NavBar />
       <StyledWrapper>
         <StyledContent>
@@ -49,6 +49,7 @@ const Hero = () => {
               href="https://www.google.com"
               target="_blank"
               rel="noopener noreferrer"
+              title="LinkedIn"
             >
               <FontAwesomeIcon icon={faLinkedin} />
             </a>
@@ -56,6 +57,7 @@ const Hero = () => {
               href="https://www.google.com"
               target="_blank"
               rel="noopener noreferrer"
+              title="Mail"
             >
               <FontAwesomeIcon icon={faEnvelopeSquare} />
             </a>
@@ -63,6 +65,7 @@ const Hero = () => {
               href="https://www.google.com"
               target="_blank"
               rel="noopener noreferrer"
+              title="GitHub"
             >
               <FontAwesomeIcon icon={faGithubSquare} />
             </a>
