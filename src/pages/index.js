@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import GlobalStyles from 'theme/globalStyles';
 import Theme from 'theme/theme';
@@ -18,11 +18,21 @@ const IndexPage = () => {
     setIsSideNavActive(!isSideNavActive);
   };
 
+  useEffect(() => {
+    isSideNavActive &&
+      (window.onscroll = () => {
+        handleSideNav();
+      });
+  }, [isSideNavActive]);
+
   return (
     <Theme>
       <GlobalStyles />
-      {!isSideNavActive && <Hamburger callbackFn={handleSideNav} />}
-      {isSideNavActive && <SideBarNavigation callbackFn={handleSideNav} />}
+      <Hamburger isSideNavActive={isSideNavActive} callbackFn={handleSideNav} />
+      <SideBarNavigation
+        isSideNavActive={isSideNavActive}
+        callbackFn={handleSideNav}
+      />
       <Hero />
       <AboutMe />
       <Skills />

@@ -3,15 +3,10 @@ import React from 'react';
 import scrollTo from 'gatsby-plugin-smoothscroll';
 
 import { StyledWrapper, StyledListWrapper, StyledList } from './styled';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
-const SideBarNavigation = ({ callbackFn }) => {
+const SideBarNavigation = ({ callbackFn, isSideNavActive }) => {
   return (
-    <StyledWrapper>
-      <button onClick={() => callbackFn()}>
-        <FontAwesomeIcon icon={faTimes} />
-      </button>
+    <StyledWrapper isActive={isSideNavActive}>
       <StyledListWrapper>
         <StyledList>
           <li onClick={() => callbackFn()}>

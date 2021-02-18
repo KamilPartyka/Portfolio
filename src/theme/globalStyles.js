@@ -7,6 +7,8 @@ const GlobalStyles = createGlobalStyle`
 
   *, *::before, *::after {
     box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
 
   html {

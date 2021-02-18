@@ -16,14 +16,14 @@ const Hero = () => {
   const data = useStaticQuery(
     graphql`
       query {
-        bgImage: file(relativePath: { eq: "hero-background.png" }) {
+        bgImage: file(relativePath: { eq: "hero-bg.png" }) {
           childImageSharp {
             fluid {
               ...GatsbyImageSharpFluid_withWebp
             }
           }
         }
-        heroImg: file(relativePath: { eq: "Kamil-Partyka.jpg" }) {
+        heroImg: file(relativePath: { eq: "KamilPartykaAva.jpg" }) {
           childImageSharp {
             fluid {
               ...GatsbyImageSharpFluid_withWebp
@@ -35,6 +35,8 @@ const Hero = () => {
   );
   const bgImage = data.bgImage.childImageSharp.fluid;
   const heroImg = data.heroImg.childImageSharp.fluid;
+
+  console.log(bgImage);
 
   return (
     <BackgroundImage id="hero" fluid={bgImage} backgroundColor={'#41A1B1'}>

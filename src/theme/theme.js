@@ -4,7 +4,7 @@ import { ThemeProvider } from 'styled-components';
 const theme = {
   colors: {
     white: '#FFFFFF',
-    dark: '3D3D3D',
+    dark: '#3D3D3D',
     blue: '#41A1B1',
     yellow: '#FEE74B',
     gray: '#898F8B',
@@ -21,6 +21,10 @@ const theme = {
     md: 768,
     lg: 992,
     xl: 1200,
+  },
+  bacelHeight: {
+    mobile: '3rem',
+    desktop: '10rem',
   },
 };
 

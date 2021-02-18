@@ -1,27 +1,24 @@
-import styled from 'styled-components';
-import breakpoint from 'styled-components-breakpoint';
+import styled, { css } from 'styled-components';
 
 export const StyledWrapper = styled.aside`
   position: fixed;
-  top: 0;
   left: 0;
-  bottom: 0;
   right: 0;
+  top: 0;
+  bottom: 0;
+  transform: translateX(100vw);
+  transition: 500ms;
   z-index: 5;
   background-color: ${({ theme }) => theme.colors.gray};
+  opacity: 0;
 
-  > button {
-    position: absolute;
-    right: 0;
-    top: 0;
-    border: none;
-    background-color: transparent;
-    margin: 2rem;
-  }
-  svg {
-    font-size: 5rem;
-    color: ${({ theme }) => theme.colors.yellow};
-  }
+  ${({ isActive }) =>
+    isActive &&
+    css`
+      opacity: 1;
+      transform: translateX(0);
+      transition: 0.5s;
+    `}
 `;
 
 export const StyledListWrapper = styled.div`
@@ -62,9 +59,11 @@ export const StyledList = styled.ul`
       outline: none;
       transition: color 200ms;
 
-      :hover {
-        cursor: pointer;
-        color: ${({ theme }) => theme.colors.yellow};
+      @media (hover: hover) {
+        :hover {
+          cursor: pointer;
+          color: ${({ theme }) => theme.colors.yellow};
+        }
       }
     }
   }
