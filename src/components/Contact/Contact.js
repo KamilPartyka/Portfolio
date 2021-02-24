@@ -4,14 +4,14 @@ import Bevel from 'components/Bevel/Bevel';
 
 import { StyledWrapper } from './styled';
 
-const Skills = () => {
+const Contact = () => {
   return (
     <>
-      <StyledWrapper id="skills">
-        <h2>Skills</h2>
+      <StyledWrapper id="contact">
+        <h2>Contact</h2>
       </StyledWrapper>
     </>
   );
 };
 
-export default Skills;
+export default Contact;

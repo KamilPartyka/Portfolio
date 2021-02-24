@@ -47,6 +47,10 @@ export const StyledList = styled.ul`
     font-size: 35px;
     line-height: 41px;
 
+    @media screen and (orientation: landscape) {
+      margin-bottom: 1.5rem;
+    }
+
     button {
       border: none;
       background-color: transparent;

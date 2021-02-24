@@ -1,20 +1,17 @@
 import styled from 'styled-components';
 import breakpoint from 'styled-components-breakpoint';
 
-export const StyledWrapper = styled.nav`
+export const StyledWrapper = styled.header`
+  display: none;
   margin: 0;
   width: 100%;
-  display: flex;
   justify-content: space-between;
 
-  ${breakpoint('xs')`
-    display: none;
-  `}
   ${breakpoint('lg')`
     display: flex;
   `}
 `;
-export const StyledListWrapper = styled.div`
+export const StyledListWrapper = styled.nav`
   padding: 3rem 2rem 0 0;
 `;
 

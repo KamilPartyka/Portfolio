@@ -9,9 +9,13 @@ export const StyledWrapper = styled.div`
   margin: 0;
   height: calc(100vh - ${({ theme }) => theme.bacelHeight.mobile});
 
-  ${breakpoint('md')`
+  ${breakpoint('lg')`
     height: calc(100vh - ${({ theme }) => theme.bacelHeight.desktop});
   `}
+
+  @media screen and (max-height: 660px) and (orientation: landscape) {
+    height: auto;
+  }
 `;
 
 export const StyledContent = styled.div`
@@ -24,6 +28,15 @@ export const StyledContent = styled.div`
   ${breakpoint('md')`
      margin-top: -10rem;
   `}
+
+  @media screen and (orientation: landscape) {
+    margin-top: 4rem;
+  }
+
+  @media screen and (min-width: ${({ theme }) =>
+      theme.breakpoints.md}) and (orientation: landscape) {
+    margin-top: 4rem;
+  }
 
   h1 {
     margin: 3rem 0 1.5rem 0;
@@ -94,5 +107,36 @@ export const StyledIconsWrapper = styled.div`
         }
       }
     }
+  }
+`;
+
+export const StyledArrows = styled.div`
+  @keyframes scrollDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-1rem);
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(2rem);
+    }
+  }
+
+  font-size: 6rem;
+  color: ${({ theme }) => theme.colors.yellow};
+  cursor: pointer;
+
+  #arrow1,
+  #arrow2 {
+    display: block;
+    animation: scrollDown 2500ms linear infinite;
+  }
+
+  #arrow2 {
+    animation-delay: 200ms;
+    margin-top: -3.5rem;
   }
 `;

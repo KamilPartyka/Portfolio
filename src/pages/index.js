@@ -5,11 +5,11 @@ import Theme from 'theme/theme';
 
 import Hero from 'components/Hero/Hero';
 import AboutMe from 'components/AboutMe/AboutMe';
-import Skills from 'components/Skills/Skills';
 import Portfolio from 'components/Portfolio/Portfolio';
 import Footer from 'components/Footer/Footer';
 import SideBarNavigation from 'components/SideBarNavigation/SideBarNavigation';
 import Hamburger from 'components/Hamburger/Hamburger';
+import Contact from 'components/Contact/Contact';
 
 const IndexPage = () => {
   const [isSideNavActive, setIsSideNavActive] = useState(false);
@@ -35,8 +35,8 @@ const IndexPage = () => {
       />
       <Hero />
       <AboutMe />
-      <Skills />
       <Portfolio />
+      <Contact />
       <Footer />
     </Theme>
   );

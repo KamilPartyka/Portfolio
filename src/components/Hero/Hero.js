@@ -6,11 +6,20 @@ import Bevel from 'components/Bevel/Bevel';
 import { graphql, useStaticQuery } from 'gatsby';
 import Image from 'gatsby-image';
 import BackgroundImage from 'gatsby-background-image';
+import scrollTo from 'gatsby-plugin-smoothscroll';
 
-import { StyledWrapper, StyledContent, StyledIconsWrapper } from './styled';
+import {
+  StyledWrapper,
+  StyledContent,
+  StyledIconsWrapper,
+  StyledArrows,
+} from './styled';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithubSquare } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelopeSquare } from '@fortawesome/free-solid-svg-icons';
+import {
+  faEnvelopeSquare,
+  faChevronDown,
+} from '@fortawesome/free-solid-svg-icons';
 
 const Hero = () => {
   const data = useStaticQuery(
@@ -35,8 +44,6 @@ const Hero = () => {
   );
   const bgImage = data.bgImage.childImageSharp.fluid;
   const heroImg = data.heroImg.childImageSharp.fluid;
-
-  console.log(bgImage);
 
   return (
     <BackgroundImage id="hero" fluid={bgImage} backgroundColor={'#41A1B1'}>
@@ -73,6 +80,10 @@ const Hero = () => {
             </a>
           </StyledIconsWrapper>
         </StyledContent>
+        <StyledArrows onClick={() => scrollTo('#aboutMe')}>
+          <FontAwesomeIcon id="arrow1" icon={faChevronDown} />
+          <FontAwesomeIcon id="arrow2" icon={faChevronDown} />
+        </StyledArrows>
       </StyledWrapper>
       <Bevel />
     </BackgroundImage>

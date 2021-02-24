@@ -3,8 +3,6 @@ import React from 'react';
 import Image from 'gatsby-image';
 import { graphql, useStaticQuery } from 'gatsby';
 
-import Bevel from 'components/Bevel/Bevel';
-
 import { StyledWrapper, StyledInnerWrapper, StyledText } from './styled';
 import Header from 'components/Header/Header';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -48,7 +46,6 @@ const AboutMe = () => {
           </StyledText>
         </StyledInnerWrapper>
       </StyledWrapper>
-      <Bevel />
     </>
   );
 };

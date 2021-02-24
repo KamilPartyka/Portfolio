@@ -35,6 +35,7 @@ export const StyledHamburgeBoxInner = styled.span`
   top: 50%;
   transform: translateY(-50%);
   transition: 300ms;
+
   &,
   ::after,
   ::before {
@@ -44,6 +45,7 @@ export const StyledHamburgeBoxInner = styled.span`
     position: absolute;
     right: 0;
     border-radius: 0.5rem;
+    box-shadow: 0 0 3px -1px black;
   }
 
   ::before {
@@ -60,6 +62,11 @@ export const StyledHamburgeBoxInner = styled.span`
   ${({ isSideNavActive }) =>
     isSideNavActive &&
     css`
+      &,
+      ::before,
+      ::after {
+        box-shadow: none;
+      }
       & {
         background-color: transparent;
       }

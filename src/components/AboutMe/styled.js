@@ -15,12 +15,8 @@ export const StyledInnerWrapper = styled.div`
     padding: 5rem 0;
     display: grid;
     grid-gap: 1rem;
-    grid-template-columns: 2fr 30rem;
+    grid-template-columns: 2fr 1fr;
     grid-template-rows: 10rem minmax(30rem, 5fr);
-  `}
-
-  ${breakpoint('xl')`
-      width: 70%;
   `}
 
   .gatsby-image-wrapper {
@@ -42,7 +38,7 @@ export const StyledInnerWrapper = styled.div`
 
     ${breakpoint('xl')`
       min-width: 40rem;
-      max-height: 50rem;
+      max-height: 60rem;
     `}
   }
 `;
@@ -50,6 +46,7 @@ export const StyledText = styled.div`
   position: relative;
   margin: 2rem auto;
   width: 90%;
+  min-height: 20rem;
 
   ${breakpoint('md')`
       grid-column: 1/2;
@@ -65,6 +62,8 @@ export const StyledText = styled.div`
 
     ${breakpoint('md')`
       max-width: 70rem;
+      font-size: 2.1rem;
+      line-height: 2.5rem;
     `}
 
     ${breakpoint('xl')`
