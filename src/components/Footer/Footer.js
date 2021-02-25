@@ -7,9 +7,12 @@ import { StyledWrapper, StyledFooter } from './styled';
 const Footer = () => {
   return (
     <StyledWrapper>
-      <Bevel reverse />
+      <Bevel isReverse />
       <StyledFooter>
-        <p>{new Date().getFullYear()} Kamil Partyka</p>
+        <p>
+          <span onClick={() => alert('test')}>Code with ❤️</span>{' '}
+          {new Date().getFullYear()} Kamil Partyka
+        </p>
       </StyledFooter>
     </StyledWrapper>
   );

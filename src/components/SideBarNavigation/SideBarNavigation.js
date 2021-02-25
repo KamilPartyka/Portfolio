@@ -1,5 +1,6 @@
 import React from 'react';
 
+import PropTypes from 'prop-types';
 import scrollTo from 'gatsby-plugin-smoothscroll';
 
 import { StyledWrapper, StyledListWrapper, StyledList } from './styled';
@@ -13,17 +14,29 @@ const SideBarNavigation = ({ callbackFn, isSideNavActive }) => {
             <button onClick={() => scrollTo('#hero')}>Home</button>
           </li>
           <li onClick={() => callbackFn()}>
-            <button onClick={() => scrollTo('#aboutMe')}>About me</button>
-          </li>
-          <li onClick={() => callbackFn()}>
-            <button onClick={() => scrollTo('#skills')}>Skills</button>
+            <button onClick={() => scrollTo('#aboutMe', 'center')}>
+              About me
+            </button>
           </li>
           <li onClick={() => callbackFn()}>
             <button onClick={() => scrollTo('#portfolio')}>Portfolio</button>
+          </li>
+          <li onClick={() => callbackFn()}>
+            <button onClick={() => scrollTo('#contact')}>Contact</button>
           </li>
         </StyledList>
       </StyledListWrapper>
     </StyledWrapper>
   );
 };
+
+SideBarNavigation.propTypes = {
+  callbackFn: PropTypes.func.isRequired,
+  isSideNavActive: PropTypes.bool,
+};
+
+SideBarNavigation.defaultProps = {
+  isSideNavActive: false,
+};
+
 export default SideBarNavigation;

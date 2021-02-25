@@ -1,5 +1,7 @@
 import React from 'react';
 
+import PropTypes from 'prop-types';
+
 import {
   StyledWrapper,
   StyledHamburger,
@@ -19,6 +21,14 @@ const Hamburger = ({ callbackFn, isSideNavActive }) => {
       </StyledHamburger>
     </StyledWrapper>
   );
+};
+
+Hamburger.propTypes = {
+  callbackFn: PropTypes.func.isRequired,
+  isSideNavActive: PropTypes.bool,
+};
+Hamburger.defaultProps = {
+  isSideNavActive: false,
 };
 
 export default Hamburger;

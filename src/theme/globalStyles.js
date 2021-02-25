@@ -2,9 +2,6 @@ import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
 
-@import url('https://fonts.googleapis.com/css2?family=Cambo&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
-
   *, *::before, *::after {
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
@@ -26,8 +23,6 @@ const GlobalStyles = createGlobalStyle`
     font-style: normal;
     font-weight: normal;
   }
-
-  
 `;
 
 export default GlobalStyles;

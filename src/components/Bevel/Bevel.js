@@ -1,33 +1,21 @@
 import React from 'react';
 
-import styled, { css } from 'styled-components';
-import breakpoint from 'styled-components-breakpoint';
+import PropTypes from 'prop-types';
 
-const StyledBevel = styled.div`
-  width: 100%;
-  height: ${({ theme }) => theme.bacelHeight.mobile};
+import { StyledBevel } from './styled';
 
-  background-color: ${({ color }) =>
-    color
-      ? css`
-          ${({ theme }) => theme.colors.blue};
-        `
-      : css`
-          ${({ theme }) => theme.colors.gray};
-        `};
+const Bevel = ({ isReverse, isBlue }) => {
+  return <StyledBevel isReverse={isReverse} isBlue={isBlue} />;
+};
 
-  clip-path: ${({ reverse }) =>
-    reverse
-      ? 'polygon(100% 0, 0 0, 0 100%);'
-      : 'polygon(100% 100%, 100% 0, 100% 0, 0 100%);'};
+Bevel.propTypes = {
+  isReverse: PropTypes.bool,
+  isBlue: PropTypes.bool,
+};
 
-  ${breakpoint('lg')`
-    height: ${({ theme }) => theme.bacelHeight.desktop};
-  `}
-`;
-
-const Bevel = ({ reverse, color }) => {
-  return <StyledBevel reverse={reverse} color={color} />;
+Bevel.defaultProps = {
+  isReverse: false,
+  isBlue: false,
 };
 
 export default Bevel;

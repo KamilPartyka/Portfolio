@@ -9,6 +9,7 @@ import {
   StyledWrapper,
   StyledInnerWrapper,
   StyledItemsWrapper,
+  StyledSvgWrapper,
 } from './styled';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFileCode } from '@fortawesome/free-regular-svg-icons';
@@ -17,11 +18,11 @@ import { faLaptopCode } from '@fortawesome/free-solid-svg-icons';
 const Portfolio = () => {
   return (
     <>
-      <Bevel reverse />
+      <Bevel isReverse />
       <StyledWrapper>
         <StyledInnerWrapper>
           <div id="portfolio">
-            <Header secondary title={'Portfolio'} />
+            <Header secondary title="Portfolio" />
             <FontAwesomeIcon id="fileIcon" icon={faFileCode} />
           </div>
           <StyledItemsWrapper>
@@ -30,9 +31,9 @@ const Portfolio = () => {
             ))}
           </StyledItemsWrapper>
         </StyledInnerWrapper>
-        <div>
+        <StyledSvgWrapper>
           <FontAwesomeIcon id="fileIcon" icon={faLaptopCode} />
-        </div>
+        </StyledSvgWrapper>
       </StyledWrapper>
     </>
   );

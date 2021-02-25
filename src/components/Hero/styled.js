@@ -4,7 +4,7 @@ import breakpoint from 'styled-components-breakpoint';
 export const StyledWrapper = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   flex-direction: column;
   margin: 0;
   height: calc(100vh - ${({ theme }) => theme.bacelHeight.mobile});
@@ -24,10 +24,6 @@ export const StyledContent = styled.div`
   justify-content: center;
   flex-direction: column;
   margin-top: 0;
-
-  ${breakpoint('md')`
-     margin-top: -10rem;
-  `}
 
   @media screen and (orientation: landscape) {
     margin-top: 4rem;
@@ -129,6 +125,10 @@ export const StyledArrows = styled.div`
   color: ${({ theme }) => theme.colors.yellow};
   cursor: pointer;
 
+  ${breakpoint('xl')`
+    font-size: 7rem; 
+  `}
+
   #arrow1,
   #arrow2 {
     display: block;
@@ -138,5 +138,9 @@ export const StyledArrows = styled.div`
   #arrow2 {
     animation-delay: 200ms;
     margin-top: -3.5rem;
+
+    ${breakpoint('xl')`
+      margin-top: -4rem;
+    `}
   }
 `;

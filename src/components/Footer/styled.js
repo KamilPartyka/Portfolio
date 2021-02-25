@@ -1,24 +1,32 @@
 import styled from 'styled-components';
+import breakpoint from 'styled-components-breakpoint';
 
 export const StyledWrapper = styled.div`
   background-color: ${({ theme }) => theme.colors.blue};
-  height: 17rem;
 `;
 
 export const StyledFooter = styled.footer`
-  font-family: Cambo;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 36px;
-  line-height: 40px;
-  text-align: center;
-  color: ${({ theme }) => theme.colors.white};
-  text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
-  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 2rem;
 
   p {
-    position: absolute;
-    right: 2rem;
-    bottom: 0.1rem;
+    font-family: Cambo;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.8rem;
+    text-align: center;
+    color: ${({ theme }) => theme.colors.white};
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+
+    ${breakpoint('md')`
+      font-size: 2.5rem;
+    `}
+
+    span {
+      cursor: pointer;
+    }
   }
 `;

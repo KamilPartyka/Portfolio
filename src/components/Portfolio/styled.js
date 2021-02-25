@@ -6,34 +6,38 @@ export const StyledWrapper = styled.section`
   margin-top: -${({ theme }) => theme.bacelHeight.mobile};
   background-color: ${({ theme }) => theme.colors.blue};
 
-  > div {
-    position: relative;
-    > svg {
-      display: none;
-    }
-  }
-  ${breakpoint('md')`
-    div > svg {
-    display: block;
-    font-size: 20rem;
-    color: ${({ theme }) => theme.colors.white};
-    opacity: 0.4;
-    position: absolute;
-    bottom: 1rem;
-    right: 1rem;
-    margin: 2rem;
-  }
-  `}
-
   ${breakpoint('lg')`
     margin-top: -${({ theme }) => theme.bacelHeight.desktop};
   `}
 `;
 
+export const StyledSvgWrapper = styled.div`
+  position: relative;
+  height: 1px;
+
+  svg {
+    display: none;
+  }
+
+  ${breakpoint('md')`
+    svg {
+      display: block;
+      font-size: 20rem;
+      color: ${({ theme }) => theme.colors.white};
+      opacity: 0.4;
+      position: absolute;
+      bottom: 1rem;
+      right: 1rem;
+      margin: 2rem;
+    }
+  `}
+`;
+
 export const StyledInnerWrapper = styled.div`
   ${breakpoint('md')`
-    width: 80%;
+    max-width: 1520px;
     margin: 0 auto;
+    width: 80%;
     padding: 5rem 0;
   `}
 
@@ -70,6 +74,7 @@ export const StyledItemsWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  justify-content: center;
 
   ${breakpoint('sm')`
    margin: 4rem;

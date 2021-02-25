@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 import GlobalStyles from 'theme/globalStyles';
 import Theme from 'theme/theme';
+import { Helmet } from 'react-helmet';
 
 import Hero from 'components/Hero/Hero';
 import AboutMe from 'components/AboutMe/AboutMe';
@@ -27,6 +28,18 @@ const IndexPage = () => {
 
   return (
     <Theme>
+      <Helmet>
+        <title>Kamil Partyka</title>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Cambo&display=swap"
+          rel="stylesheet"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+          rel="stylesheet"
+        />
+      </Helmet>
+
       <GlobalStyles />
       <Hamburger isSideNavActive={isSideNavActive} callbackFn={handleSideNav} />
       <SideBarNavigation

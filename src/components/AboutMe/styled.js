@@ -10,8 +10,9 @@ export const StyledWrapper = styled.section`
 export const StyledInnerWrapper = styled.div`
   ${breakpoint('md')`
     min-height: 70vh;
-    width: 80%;
+    max-width: 1520px;
     margin: 0 auto;
+    width: 80%;
     padding: 5rem 0;
     display: grid;
     grid-gap: 1rem;

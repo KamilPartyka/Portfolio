@@ -2,15 +2,13 @@ import styled from 'styled-components';
 import breakpoint from 'styled-components-breakpoint';
 
 export const StyledWrapper = styled.div`
-  padding: 2rem;
+  padding: 1rem;
   width: 100%;
   z-index: 1;
 
   ${breakpoint('md')`
-     width: calc(100% / 2);
-  `}
-  ${breakpoint('xl')`
-     width: calc(100% / 3);
+    padding: 1vw;
+    width: calc(100% / 2);
   `}
 `;
 
@@ -61,13 +59,19 @@ export const StyledHover = styled.div`
       svg {
         font-size: 6rem;
         color: ${({ theme }) => theme.colors.dark};
-        margin: 2rem;
+        margin: 3rem;
         transition: transform 0.5s;
         
           :hover{
             transform: translateY(-10px);
           }
       }
+  `}
+  ${breakpoint('lg')`
+    svg {
+      font-size: 8rem;
+      margin: 5rem;
+    }
   `}
 `;
 

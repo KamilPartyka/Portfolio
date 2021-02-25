@@ -11,13 +11,19 @@ const NavBar = () => {
       <StyledListWrapper>
         <StyledList>
           <li>
-            <button onClick={() => scrollTo('#aboutMe')}>About me</button>
+            <button onClick={() => scrollTo('#aboutMe', 'center')}>
+              About me
+            </button>
           </li>
           <li>
-            <button onClick={() => scrollTo('#skills')}>Skills</button>
+            <button onClick={() => scrollTo('#portfolio', 'start')}>
+              Portfolio
+            </button>
           </li>
           <li>
-            <button onClick={() => scrollTo('#portfolio')}>Portfolio</button>
+            <button onClick={() => scrollTo('#contact', 'center')}>
+              Contact
+            </button>
           </li>
         </StyledList>
       </StyledListWrapper>

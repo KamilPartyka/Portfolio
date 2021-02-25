@@ -80,7 +80,7 @@ const Hero = () => {
             </a>
           </StyledIconsWrapper>
         </StyledContent>
-        <StyledArrows onClick={() => scrollTo('#aboutMe')}>
+        <StyledArrows onClick={() => scrollTo('#aboutMe', 'center')}>
           <FontAwesomeIcon id="arrow1" icon={faChevronDown} />
           <FontAwesomeIcon id="arrow2" icon={faChevronDown} />
         </StyledArrows>
