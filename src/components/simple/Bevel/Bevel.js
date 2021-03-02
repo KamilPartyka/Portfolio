@@ -2,7 +2,7 @@ import React from 'react';
 
 import PropTypes from 'prop-types';
 
-import { StyledBevel } from './styled';
+import { StyledBevel } from './styles';
 
 const Bevel = ({ isReverse, isBlue }) => {
   return <StyledBevel isReverse={isReverse} isBlue={isBlue} />;

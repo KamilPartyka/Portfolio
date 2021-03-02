@@ -2,7 +2,7 @@ import React from 'react';
 
 import PropTypes from 'prop-types';
 
-import { StyledWrapper, StyledHeader } from './styled';
+import { StyledWrapper, StyledHeader } from './styles';
 
 const Header = ({ title, secondary }) => {
   return (

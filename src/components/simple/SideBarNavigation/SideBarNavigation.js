@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import scrollTo from 'gatsby-plugin-smoothscroll';
 
-import { StyledWrapper, StyledListWrapper, StyledList } from './styled';
+import { StyledWrapper, StyledListWrapper, StyledList } from './styles';
 
 const SideBarNavigation = ({ callbackFn, isSideNavActive }) => {
   return (

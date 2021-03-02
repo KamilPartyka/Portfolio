@@ -7,7 +7,7 @@ import {
   StyledHamburger,
   StyledHamburgeBox,
   StyledHamburgeBoxInner,
-} from './styled';
+} from './styles';
 
 const Hamburger = ({ callbackFn, isSideNavActive }) => {
   return (

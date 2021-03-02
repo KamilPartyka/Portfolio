@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Bevel from 'components/Bevel/Bevel';
+import Bevel from 'components/simple/Bevel/Bevel';
 
-import { StyledWrapper, StyledFooter } from './styled';
+import { StyledWrapper, StyledFooter } from './styles';
 
 const Footer = () => {
   return (

@@ -2,12 +2,11 @@ import React from 'react';
 
 import scrollTo from 'gatsby-plugin-smoothscroll';
 
-import { StyledWrapper, StyledListWrapper, StyledList } from './styled';
+import { StyledWrapper, StyledListWrapper, StyledList } from './styles';
 
 const NavBar = () => {
   return (
     <StyledWrapper>
-      <div />
       <StyledListWrapper>
         <StyledList>
           <li>

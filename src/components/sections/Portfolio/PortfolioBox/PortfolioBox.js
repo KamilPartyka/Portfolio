@@ -7,7 +7,7 @@ import {
   StyledHover,
   StyledImage,
   StyledText,
-} from './styled';
+} from './styles';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLink } from '@fortawesome/free-solid-svg-icons';

@@ -5,7 +5,7 @@ export const StyledWrapper = styled.header`
   display: none;
   margin: 0;
   width: 100%;
-  justify-content: space-between;
+  justify-content: flex-end;
 
   ${breakpoint('lg')`
     display: flex;

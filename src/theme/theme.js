@@ -9,6 +9,8 @@ const theme = {
     yellow: '#FEE74B',
     gray: '#898F8B',
     lightYellow: '#F5F0D3',
+    error: '#8C1C2D',
+    success: '#044604',
   },
   fontSizes: {
     small: '1em',

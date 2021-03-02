@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Bevel from 'components/Bevel/Bevel';
-import Header from 'components/Header/Header';
-import PortfolioBox from 'components/PortfolioBox/PortfolioBox';
+import Bevel from 'components/simple/Bevel/Bevel';
+import Header from 'components/simple/Header/Header';
+import PortfolioBox from 'components/sections/Portfolio/PortfolioBox/PortfolioBox';
 
 import { portfolioItems } from 'data/portfolioItems';
 import {
@@ -10,7 +10,7 @@ import {
   StyledInnerWrapper,
   StyledItemsWrapper,
   StyledSvgWrapper,
-} from './styled';
+} from './styles';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFileCode } from '@fortawesome/free-regular-svg-icons';
 import { faLaptopCode } from '@fortawesome/free-solid-svg-icons';

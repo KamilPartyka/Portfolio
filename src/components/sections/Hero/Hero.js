@@ -1,7 +1,7 @@
 import React from 'react';
 
-import NavBar from 'components/NavBar/NavBar';
-import Bevel from 'components/Bevel/Bevel';
+import NavBar from 'components/simple/NavBar/NavBar';
+import Bevel from 'components/simple/Bevel/Bevel';
 
 import { graphql, useStaticQuery } from 'gatsby';
 import Image from 'gatsby-image';
@@ -13,7 +13,7 @@ import {
   StyledContent,
   StyledIconsWrapper,
   StyledArrows,
-} from './styled';
+} from './styles';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithubSquare } from '@fortawesome/free-brands-svg-icons';
 import {
