@@ -1,0 +1,38 @@
+{
+  "env": {
+    "browser": true,
+    "es2020": true
+  },
+  "extends": ["plugin:react/recommended", "airbnb", "prettier"],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": ["react"],
+  "rules": {
+    "react/jsx-filename-extension": [1, { "extensions": [".js"] }],
+    "no-unused-expressions": [2, { "allowShortCircuit": true }]
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": ["src"]
+      }
+    }
+  },
+  "globals": {
+    "window": true,
+    "process": true,
+    "localStorage": true,
+    "Promise": true,
+    "document": true,
+    "console": true,
+    "test": true,
+    "expect": true,
+    "module": true,
+    "alert": true
+  }
+}

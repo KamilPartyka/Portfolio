@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 
 import { StyledBevel } from './styles';
 
-const Bevel = ({ isReverse, isBlue }) => {
-  return <StyledBevel isReverse={isReverse} isBlue={isBlue} />;
-};
+const Bevel = ({ isReverse, isBlue }) => (
+  <StyledBevel isReverse={isReverse} isBlue={isBlue} />
+);
 
 Bevel.propTypes = {
   isReverse: PropTypes.bool,

@@ -8,18 +8,18 @@ import Image from 'gatsby-image';
 import BackgroundImage from 'gatsby-background-image';
 import scrollTo from 'gatsby-plugin-smoothscroll';
 
-import {
-  StyledWrapper,
-  StyledContent,
-  StyledIconsWrapper,
-  StyledArrows,
-} from './styles';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithubSquare } from '@fortawesome/free-brands-svg-icons';
 import {
   faEnvelopeSquare,
   faChevronDown,
 } from '@fortawesome/free-solid-svg-icons';
+import {
+  StyledWrapper,
+  StyledContent,
+  StyledIconsWrapper,
+  StyledArrows,
+} from './styles';
 
 const Hero = () => {
   const data = useStaticQuery(
@@ -46,7 +46,7 @@ const Hero = () => {
   const heroImg = data.heroImg.childImageSharp.fluid;
 
   return (
-    <BackgroundImage id="hero" fluid={bgImage} backgroundColor={'#41A1B1'}>
+    <BackgroundImage id="hero" fluid={bgImage} backgroundColor="#41A1B1">
       <NavBar />
       <StyledWrapper>
         <StyledContent>

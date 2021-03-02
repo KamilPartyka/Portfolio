@@ -1,5 +1,10 @@
 import React from 'react';
 
+import PropTypes from 'prop-types';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLink } from '@fortawesome/free-solid-svg-icons';
+import { faGitAlt } from '@fortawesome/free-brands-svg-icons';
 import {
   StyledWrapper,
   StyledInnerWrapper,
@@ -9,16 +14,19 @@ import {
   StyledText,
 } from './styles';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLink } from '@fortawesome/free-solid-svg-icons';
-import { faGitAlt } from '@fortawesome/free-brands-svg-icons';
-
 const PortfolioBox = ({ webLink, gitLink, image, description }) => {
   const links = () => (
     <div>
-      <a href={webLink} target="_blank" rel="noopener noreferrer" title="Link">
-        <FontAwesomeIcon icon={faLink} />
-      </a>
+      {webLink && (
+        <a
+          href={webLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Link"
+        >
+          <FontAwesomeIcon icon={faLink} />
+        </a>
+      )}
       <a
         href={gitLink}
         target="_blank"
@@ -44,6 +52,18 @@ const PortfolioBox = ({ webLink, gitLink, image, description }) => {
       </StyledInnerWrapper>
     </StyledWrapper>
   );
+};
+
+PortfolioBox.propTypes = {
+  webLink: PropTypes.string,
+  gitLink: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  description: PropTypes.string,
+};
+
+PortfolioBox.defaultProps = {
+  webLink: null,
+  description: 'One of the websites I created',
 };
 
 export default PortfolioBox;

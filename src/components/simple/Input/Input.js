@@ -16,35 +16,36 @@ const Input = ({
   placeholder,
   maxLength,
   errorMsg,
-  ...props
-}) => {
-  return (
-    <>
-      <StyledLabel htmlFor={name}>{label}</StyledLabel>
-      {isTextarea ? (
-        <StyledTextarea
-          id={name}
-          name={name}
-          placeholder={placeholder}
-          maxLength={maxLength}
-          errorMsg={errorMsg}
-          {...props}
-        />
-      ) : (
-        <StyledInput
-          type={name}
-          id={name}
-          name={name}
-          placeholder={placeholder}
-          maxLength={maxLength}
-          errorMsg={errorMsg}
-          {...props}
-        />
-      )}
-      {errorMsg && <StyledErrorMsg>{errorMsg}</StyledErrorMsg>}
-    </>
-  );
-};
+  onChange,
+  value,
+}) => (
+  <>
+    <StyledLabel htmlFor={name}>{label}</StyledLabel>
+    {isTextarea ? (
+      <StyledTextarea
+        id={name}
+        name={name}
+        placeholder={placeholder}
+        maxLength={maxLength}
+        errorMsg={errorMsg}
+        onChange={onChange}
+        value={value}
+      />
+    ) : (
+      <StyledInput
+        type={name}
+        id={name}
+        name={name}
+        placeholder={placeholder}
+        maxLength={maxLength}
+        errorMsg={errorMsg}
+        onChange={onChange}
+        value={value}
+      />
+    )}
+    {errorMsg && <StyledErrorMsg>{errorMsg}</StyledErrorMsg>}
+  </>
+);
 
 Input.propTypes = {
   isTextarea: PropTypes.bool,
@@ -52,11 +53,16 @@ Input.propTypes = {
   name: PropTypes.string.isRequired,
   placeholder: PropTypes.string.isRequired,
   maxLength: PropTypes.number,
+  errorMsg: PropTypes.string,
+  onChange: PropTypes.func.isRequired,
+  value: PropTypes.string,
 };
 
 Input.defaultProps = {
   isTextarea: false,
   maxLength: 40,
+  errorMsg: '',
+  value: '',
 };
 
 export default Input;

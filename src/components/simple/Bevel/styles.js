@@ -1,3 +1,4 @@
+/* eslint-disable import/prefer-default-export */
 import styled, { css } from 'styled-components';
 import breakpoint from 'styled-components-breakpoint';
 

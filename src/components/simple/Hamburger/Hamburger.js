@@ -9,19 +9,15 @@ import {
   StyledHamburgeBoxInner,
 } from './styles';
 
-const Hamburger = ({ callbackFn, isSideNavActive }) => {
-  return (
-    <StyledWrapper>
-      <StyledHamburger onClick={() => callbackFn()}>
-        <StyledHamburgeBox>
-          <StyledHamburgeBoxInner
-            isSideNavActive={isSideNavActive}
-          ></StyledHamburgeBoxInner>
-        </StyledHamburgeBox>
-      </StyledHamburger>
-    </StyledWrapper>
-  );
-};
+const Hamburger = ({ callbackFn, isSideNavActive }) => (
+  <StyledWrapper>
+    <StyledHamburger onClick={() => callbackFn()}>
+      <StyledHamburgeBox>
+        <StyledHamburgeBoxInner isSideNavActive={isSideNavActive} />
+      </StyledHamburgeBox>
+    </StyledHamburger>
+  </StyledWrapper>
+);
 
 Hamburger.propTypes = {
   callbackFn: PropTypes.func.isRequired,

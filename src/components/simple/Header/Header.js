@@ -4,13 +4,11 @@ import PropTypes from 'prop-types';
 
 import { StyledWrapper, StyledHeader } from './styles';
 
-const Header = ({ title, secondary }) => {
-  return (
-    <StyledWrapper secondary={secondary}>
-      <StyledHeader secondary={secondary}>{title}</StyledHeader>
-    </StyledWrapper>
-  );
-};
+const Header = ({ title, secondary }) => (
+  <StyledWrapper secondary={secondary}>
+    <StyledHeader secondary={secondary}>{title}</StyledHeader>
+  </StyledWrapper>
+);
 
 Header.propTypes = {
   title: PropTypes.string.isRequired,

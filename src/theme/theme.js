@@ -1,5 +1,6 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
+import PropTypes from 'prop-types';
 
 const theme = {
   colors: {
@@ -23,6 +24,7 @@ const theme = {
     md: 768,
     lg: 992,
     xl: 1200,
+    xxl: 1700,
   },
   bacelHeight: {
     mobile: '3rem',
@@ -33,5 +35,12 @@ const theme = {
 const Theme = ({ children }) => (
   <ThemeProvider theme={theme}>{children}</ThemeProvider>
 );
+
+Theme.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]).isRequired,
+};
 
 export default Theme;

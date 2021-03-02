@@ -10,6 +10,10 @@ export const StyledWrapper = styled.div`
     padding: 1vw;
     width: calc(100% / 2);
   `}
+  ${breakpoint('xxl')`
+    padding: 1vw;
+    width: calc(100% / 3);
+  `}
 `;
 
 export const StyledInnerWrapper = styled.div`
@@ -36,6 +40,7 @@ export const StyledImage = styled.div`
   background-position: 0 center;
   background-size: cover;
   background-image: url('${({ imgSrc }) => imgSrc}');
+  background-position: center;
 `;
 
 export const StyledHover = styled.div`

@@ -3,10 +3,10 @@ import React from 'react';
 import Image from 'gatsby-image';
 import { graphql, useStaticQuery } from 'gatsby';
 
-import { StyledWrapper, StyledInnerWrapper, StyledText } from './styles';
 import Header from 'components/simple/Header/Header';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCode } from '@fortawesome/free-solid-svg-icons';
+import { StyledWrapper, StyledInnerWrapper, StyledText } from './styles';
 
 const AboutMe = () => {
   const data = useStaticQuery(
@@ -28,7 +28,7 @@ const AboutMe = () => {
     <>
       <StyledWrapper id="aboutMe">
         <StyledInnerWrapper>
-          <Header title={'About me'} />
+          <Header title="About me" />
           <Image fluid={portraitImg} />
           <StyledText>
             <p>

@@ -4,6 +4,8 @@ import Bevel from 'components/simple/Bevel/Bevel';
 import Header from 'components/simple/Header/Header';
 import Input from 'components/simple/Input/Input';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import {
   StyledWrapper,
   StyledInnerWrapper,
@@ -11,8 +13,6 @@ import {
   StyledForm,
   StyledSend,
 } from './styles';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 
 const Contact = () => {
   const [formState, setFormState] = useState({
@@ -34,55 +34,41 @@ const Contact = () => {
   };
 
   const handleClearForm = () => {
-    let fields = {};
-    fields['email'] = '';
-    fields['message'] = '';
+    const fields = {};
+    fields.email = '';
+    fields.message = '';
     setFormState((prevState) => ({
       ...prevState,
-      fields: fields,
+      fields,
     }));
   };
 
-  const handleFormSubmit = (e) => {
-    e.preventDefault();
-
-    if (validateForm()) {
-      console.log('send');
-
-      setsendingMsg('Message sent successfully');
-      setTimeout(() => setsendingMsg(null), 3000);
-
-      handleClearForm();
-    } else {
-      console.log('not send');
-    }
-  };
-
   const validateForm = () => {
-    const email = formState.fields.email;
-    const message = formState.fields.message;
+    const { email } = formState.fields;
+    const { message } = formState.fields;
     let isFormValid = true;
     const errors = {};
 
     const pattern = new RegExp(
+      // eslint-disable-next-line no-useless-escape
       /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
     ); // from https://emailregex.com/
 
     if (!pattern.test(email)) {
       isFormValid = false;
-      errors['email'] = 'Please enter valid Email address';
+      errors.email = 'Please enter valid Email address';
     }
     if (!email) {
       isFormValid = false;
-      errors['email'] = 'This field is required';
+      errors.email = 'This field is required';
     }
     if (message && message[0].length < 10) {
       isFormValid = false;
-      errors['message'] = 'Message must contain more characters';
+      errors.message = 'Message must contain more characters';
     }
     if (!message) {
       isFormValid = false;
-      errors['message'] = 'This field is required';
+      errors.message = 'This field is required';
     }
 
     setFormState((prevState) => ({
@@ -91,6 +77,21 @@ const Contact = () => {
     }));
 
     return isFormValid;
+  };
+
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+
+    if (validateForm()) {
+      // console.log('send');
+
+      setsendingMsg('Message sent successfully');
+      setTimeout(() => setsendingMsg(null), 3000);
+
+      handleClearForm();
+    } else {
+      // console.log('not send');
+    }
   };
 
   return (
