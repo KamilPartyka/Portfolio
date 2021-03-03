@@ -1,15 +1,17 @@
 import React from 'react';
 
+import PropTypes from 'prop-types';
+
 import Bevel from 'components/simple/Bevel/Bevel';
 
 import { StyledWrapper, StyledFooter } from './styles';
 
-const Footer = () => (
+const Footer = ({ callbackFn }) => (
   <StyledWrapper>
     <Bevel isReverse />
     <StyledFooter>
       <p>
-        <button type="button" onClick={() => null}>
+        <button type="button" onClick={() => callbackFn()}>
           Code with ❤️
         </button>
         {new Date().getFullYear()} Kamil Partyka
@@ -17,5 +19,9 @@ const Footer = () => (
     </StyledFooter>
   </StyledWrapper>
 );
+
+Footer.propTypes = {
+  callbackFn: PropTypes.func.isRequired,
+};
 
 export default Footer;

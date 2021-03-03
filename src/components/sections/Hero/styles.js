@@ -84,7 +84,14 @@ export const StyledIconsWrapper = styled.div`
   justify-content: center;
   margin: 0;
 
-  a {
+  button {
+    background: none;
+    outline: none;
+    border: none;
+  }
+
+  a,
+  button {
     margin: 1.5rem;
 
     svg {

@@ -7,16 +7,22 @@ import { Helmet } from 'react-helmet';
 import Hero from 'components/sections/Hero/Hero';
 import AboutMe from 'components/sections/AboutMe/AboutMe';
 import Portfolio from 'components/sections/Portfolio/Portfolio';
-import Footer from 'components/sections/Footer/Footer';
 import SideBarNavigation from 'components/simple/SideBarNavigation/SideBarNavigation';
 import Hamburger from 'components/simple/Hamburger/Hamburger';
 import Contact from 'components/sections/Contact/Contact';
+import Footer from 'components/sections/Footer/Footer';
+import Modal from 'components/simple/Modal/Modal';
 
 const IndexPage = () => {
   const [isSideNavActive, setIsSideNavActive] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleSideNav = () => {
     setIsSideNavActive(!isSideNavActive);
+  };
+
+  const handleModal = () => {
+    setIsModalOpen(!isModalOpen);
   };
 
   useEffect(() => {
@@ -39,18 +45,19 @@ const IndexPage = () => {
           rel="stylesheet"
         />
       </Helmet>
-
       <GlobalStyles />
       <Hamburger isSideNavActive={isSideNavActive} callbackFn={handleSideNav} />
       <SideBarNavigation
         isSideNavActive={isSideNavActive}
         callbackFn={handleSideNav}
       />
+      {isModalOpen && <Modal callbackFn={handleModal} />}
+
       <Hero />
       <AboutMe />
       <Portfolio />
       <Contact />
-      <Footer />
+      <Footer callbackFn={handleModal} />
     </Theme>
   );
 };

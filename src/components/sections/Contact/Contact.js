@@ -6,6 +6,7 @@ import Input from 'components/simple/Input/Input';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
+import StyledButton from 'components/simple/Button/styles';
 import {
   StyledWrapper,
   StyledInnerWrapper,
@@ -28,7 +29,7 @@ const Contact = () => {
       ...prevState,
       fields: {
         ...prevState.fields,
-        [name]: [value],
+        [name]: value,
       },
     }));
   };
@@ -62,7 +63,7 @@ const Contact = () => {
       isFormValid = false;
       errors.email = 'This field is required';
     }
-    if (message && message[0].length < 10) {
+    if (message && message.length < 10) {
       isFormValid = false;
       errors.message = 'Message must contain more characters';
     }
@@ -83,14 +84,14 @@ const Contact = () => {
     e.preventDefault();
 
     if (validateForm()) {
-      // console.log('send');
+      // send
 
       setsendingMsg('Message sent successfully');
       setTimeout(() => setsendingMsg(null), 3000);
 
       handleClearForm();
     } else {
-      // console.log('not send');
+      // not send
     }
   };
 
@@ -121,7 +122,7 @@ const Contact = () => {
                 errorMsg={formState.errors.message}
               />
 
-              <button type="submit">Sumbit</button>
+              <StyledButton type="submit">Sumbit</StyledButton>
               {sendingMsg && (
                 <StyledSend>
                   <h2>{sendingMsg}</h2>

@@ -29,9 +29,13 @@ export const StyledHeader = styled.h2`
 
   ${breakpoint('md')`
     font-size: 4rem;
-`}
+    
+    ::before {
+      left: ${({ secondary }) => (secondary ? css`4rem` : css`-4rem`)};
+    }
+  `}
 
   ${breakpoint('xl')`
     font-size: 5rem;
-`}
+  `}
 `;

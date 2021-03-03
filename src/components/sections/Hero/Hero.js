@@ -55,23 +55,22 @@ const Hero = () => {
           <h2>Front-end Developer</h2>
           <StyledIconsWrapper>
             <a
-              href="https://www.google.com"
+              href="https://www.linkedin.com/in/kamil-partyka"
               target="_blank"
               rel="noopener noreferrer"
               title="LinkedIn"
             >
               <FontAwesomeIcon icon={faLinkedin} />
             </a>
-            <a
-              href="https://www.google.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="Mail"
+            <button
+              type="button"
+              title="Contact"
+              onClick={() => scrollTo('#contact', 'center')}
             >
               <FontAwesomeIcon icon={faEnvelopeSquare} />
-            </a>
+            </button>
             <a
-              href="https://www.google.com"
+              href="https://github.com/KamilPartyka"
               target="_blank"
               rel="noopener noreferrer"
               title="GitHub"
