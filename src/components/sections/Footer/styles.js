@@ -29,10 +29,14 @@ export const StyledFooter = styled.footer`
       cursor: pointer;
       background: none;
       border: none;
-      font-size: 2.3rem;
+      font-size: 1.5rem;
       color: ${({ theme }) => theme.colors.white};
       text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
       outline: none;
+
+      ${breakpoint('md')`
+      font-size: 2.5rem;
+    `}
     }
   }
 `;

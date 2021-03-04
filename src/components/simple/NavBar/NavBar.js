@@ -19,7 +19,7 @@ const NavBar = () => (
           </button>
         </li>
         <li>
-          <button type="button" onClick={() => scrollTo('#contact', 'center')}>
+          <button type="button" onClick={() => scrollTo('#contact', 'start')}>
             Contact
           </button>
         </li>

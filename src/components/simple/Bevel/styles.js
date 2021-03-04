@@ -1,8 +1,7 @@
-/* eslint-disable import/prefer-default-export */
 import styled, { css } from 'styled-components';
 import breakpoint from 'styled-components-breakpoint';
 
-export const StyledBevel = styled.div`
+const StyledBevel = styled.div`
   width: 100%;
   height: ${({ theme }) => theme.bacelHeight.mobile};
 
@@ -17,10 +16,16 @@ export const StyledBevel = styled.div`
 
   clip-path: ${({ isReverse }) =>
     isReverse
-      ? 'polygon(100% 0, 0 0, 0 100%);'
-      : 'polygon(100% 100%, 100% 0, 100% 0, 0 100%);'};
+      ? css`
+          polygon(100% 0, 0 0, 0 100%);
+        `
+      : css`
+          polygon(100% 100%, 100% 0, 100% 0, 0 100%);
+        `};
 
   ${breakpoint('lg')`
     height: ${({ theme }) => theme.bacelHeight.desktop};
   `}
 `;
+
+export default StyledBevel;

@@ -1,5 +1,7 @@
 import React from 'react';
 
+import PropTypes from 'prop-types';
+
 import NavBar from 'components/simple/NavBar/NavBar';
 import Bevel from 'components/simple/Bevel/Bevel';
 
@@ -21,7 +23,7 @@ import {
   StyledArrows,
 } from './styles';
 
-const Hero = () => {
+const Hero = ({ reference }) => {
   const data = useStaticQuery(
     graphql`
       query {
@@ -48,7 +50,7 @@ const Hero = () => {
   return (
     <BackgroundImage id="hero" fluid={bgImage} backgroundColor="#41A1B1">
       <NavBar />
-      <StyledWrapper>
+      <StyledWrapper ref={reference}>
         <StyledContent>
           <Image fluid={heroImg} alt="img" />
           <h1>Kamil Partyka</h1>
@@ -87,6 +89,13 @@ const Hero = () => {
       <Bevel />
     </BackgroundImage>
   );
+};
+
+Hero.propTypes = {
+  reference: PropTypes.oneOfType([
+    PropTypes.func,
+    PropTypes.shape({ current: PropTypes.instanceOf(Hero) }),
+  ]).isRequired,
 };
 
 export default Hero;

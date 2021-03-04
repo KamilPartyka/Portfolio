@@ -32,19 +32,20 @@ export const StyledInnerWrapper = styled.div`
 
 export const StyledImageWrapper = styled.div`
   position: relative;
+
+  #pageImg {
+    opacity: 1 !important;
+  }
 `;
 
 export const StyledImage = styled.div`
   width: 100%;
   padding-bottom: 60%;
-  background-position: 0 center;
-  background-size: cover;
-  background-image: url('${({ imgSrc }) => imgSrc}');
-  background-position: center;
 `;
 
 export const StyledHover = styled.div`
   display: none;
+  z-index: 1;
 
   ${breakpoint('md')`
     position: absolute;

@@ -1,0 +1,29 @@
+[
+  {
+    "id": 0,
+    "gitLink": "https://github.com/KamilPartyka/Portfolio",
+    "image": "../images/pages/thisPage.png",
+    "description": "Currently viewed page, created using Gatsby.js"
+  },
+  {
+    "id": 1,
+    "webLink": "https://stacon.net.pl/",
+    "gitLink": "https://github.com/KamilPartyka/Stacon-2.0",
+    "image": "../images/pages/staconPage.png",
+    "description": "Simple webpage for Stacon company, created using HTML CSS and JS"
+  },
+  {
+    "id": 2,
+    "webLink": "https://kamilpartyka.github.io/Simple-Calculator",
+    "gitLink": "https://github.com/KamilPartyka/Simple-Calculator",
+    "image": "../images/pages/calculatorPage.png",
+    "description": "Calculator Page"
+  },
+  {
+    "id": 3,
+    "webLink": "https://kamilpartyka.github.io/ToDo-List/",
+    "gitLink": "https://github.com/KamilPartyka/ToDo-List",
+    "image": "../images/pages/todoPage.png",
+    "description": "ToDo Page"
+  }
+]

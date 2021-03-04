@@ -6,8 +6,8 @@ import scrollTo from 'gatsby-plugin-smoothscroll';
 import { StyledWrapper, StyledListWrapper, StyledList } from './styles';
 
 const SideBarNavigation = ({ callbackFn, isSideNavActive }) => {
-  const handleClick = (to, option) => {
-    scrollTo(to, option);
+  const handleClick = (to) => {
+    scrollTo(to);
     callbackFn();
   };
 
@@ -21,10 +21,7 @@ const SideBarNavigation = ({ callbackFn, isSideNavActive }) => {
             </button>
           </li>
           <li>
-            <button
-              type="button"
-              onClick={() => handleClick('#aboutMe', 'center')}
-            >
+            <button type="button" onClick={() => handleClick('#aboutMe')}>
               About me
             </button>
           </li>

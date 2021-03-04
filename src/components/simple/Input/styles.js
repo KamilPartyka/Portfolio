@@ -17,7 +17,7 @@ export const StyledLabel = styled.label`
 export const StyledInput = styled.input`
   width: 100%;
   margin: auto;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   color: ${({ theme }) => theme.colors.blue};
   padding: 1rem;
   background: ${({ theme }) => theme.colors.white};
@@ -38,18 +38,23 @@ export const StyledInput = styled.input`
 
   ${breakpoint('md')`
     width: 90%;
-    font-size: 2.2rem;
+    font-size: 2rem;
   `}
 
   ::placeholder {
     color: ${({ theme }) => theme.colors.blue};
+    font-size: 1.7rem;
+
+    ${breakpoint('md')`
+      font-size: 2rem;
+    `}
   }
 `;
 
 export const StyledTextarea = styled.textarea`
   width: 100%;
   margin: auto;
-  font-size: 2.1rem;
+  font-size: 1.8rem;
   color: ${({ theme }) => theme.colors.blue};
   padding: 0.6rem 1rem;
   background: ${({ theme }) => theme.colors.white};
@@ -62,6 +67,7 @@ export const StyledTextarea = styled.textarea`
   z-index: 1;
   position: relative;
   transition: border 300ms;
+  font-family: Roboto;
 
   ${({ errorMsg, theme }) =>
     errorMsg &&
@@ -75,13 +81,16 @@ export const StyledTextarea = styled.textarea`
 
   ${breakpoint('md')`
     width: 90%;
-    font-size: 2.2rem;
+    font-size: 2rem;
   `}
   
   ::placeholder {
     color: ${({ theme }) => theme.colors.blue};
-    font-family: Roboto, sans-serif;
-    font-size: inherit;
+    font-size: 1.7rem;
+
+    ${breakpoint('md')`
+      font-size: 2rem;
+    `}
   }
 `;
 
@@ -96,8 +105,16 @@ export const StyledErrorMsg = styled.div`
   }
 
   color: ${({ theme }) => theme.colors.error};
-  margin: 0.5rem 0 0 3.5rem;
+  margin: 0.5rem 0 0 0.5rem;
   align-self: flex-start;
   font-size: 1.6rem;
   animation: loader 500ms ease;
+
+  ${breakpoint('sm')`
+    margin: 0.5rem 0 0 2rem;
+  `}
+
+  ${breakpoint('md')`
+    margin: 0.5rem 0 0 3.5rem;
+  `}
 `;
