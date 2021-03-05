@@ -37,6 +37,18 @@ export const StyledFooter = styled.footer`
       ${breakpoint('md')`
       font-size: 2.5rem;
     `}
+
+      :hover {
+        span {
+          color: red;
+        }
+      }
+    }
+
+    span {
+      color: ${({ theme }) => theme.colors.yellow};
+      font-size: 1.2em;
+      transition: color 200ms;
     }
   }
 `;

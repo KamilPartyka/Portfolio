@@ -68,7 +68,7 @@ export const StyledModal = styled.div`
     margin-bottom: -10rem;
     margin-left: -2rem;
     font-size: 25rem;
-    opacity: 0.3;
+    opacity: 0.4;
     color: ${({ theme }) => theme.colors.white};
     transform: rotate(20deg);
     z-index: 0;

@@ -12,7 +12,7 @@ const Footer = ({ callbackFn }) => (
     <StyledFooter>
       <p>
         <button type="button" onClick={() => callbackFn()}>
-          Code with ❤️
+          Code with <span>&#9829;</span>
         </button>
         {new Date().getFullYear()} Kamil Partyka
       </p>

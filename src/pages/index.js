@@ -58,7 +58,6 @@ const IndexPage = () => {
             isSideNavActive={isSideNavActive}
             callbackFn={handleSideNav}
           />
-
           {isModalOpen && <Modal callbackFn={handleModal} />}
           {!inView && <ToTopArrow />}
 

@@ -79,7 +79,7 @@ export const StyledText = styled.div`
 
     font-size: 20rem;
     color: ${({ theme }) => theme.colors.white};
-    opacity: 0.3;
+    opacity: 0.4;
 
     ${breakpoint('md')`
       left: -8rem;

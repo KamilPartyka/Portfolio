@@ -69,7 +69,7 @@ export const StyledForm = styled.form`
     right: 1rem;
     z-index: 0;
     font-size: 11rem;
-    opacity: 0.3;
+    opacity: 0.4;
     color: ${({ theme }) => theme.colors.white};
     transform: rotate(-10deg);
 

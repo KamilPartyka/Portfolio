@@ -2,6 +2,17 @@ import styled from 'styled-components';
 import breakpoint from 'styled-components-breakpoint';
 
 const StyledToTopArrow = styled.div`
+  @keyframes toUp {
+    0% {
+      transform: translateY(0rem);
+    }
+    50% {
+      transform: translateY(-1rem);
+    }
+    100% {
+      transform: translateY(0rem);
+    }
+  }
   @keyframes appear {
     0% {
       opacity: 0;
@@ -12,10 +23,16 @@ const StyledToTopArrow = styled.div`
   }
 
   position: fixed;
-  z-index: 1;
   bottom: 1rem;
   left: 2rem;
-  animation: appear 300ms ease;
+  z-index: 1;
+  animation: appear 500ms ease;
+
+  :hover {
+    svg {
+      animation: toUp 1000ms infinite;
+    }
+  }
 
   svg {
     color: ${({ theme }) => theme.colors.yellow};

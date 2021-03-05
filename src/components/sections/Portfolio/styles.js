@@ -52,7 +52,7 @@ export const StyledInnerWrapper = styled.div`
 
       font-size: 12rem;
       color: ${({ theme }) => theme.colors.white};
-      opacity: 0.3;
+      opacity: 0.4;
 
       transform: rotate(20deg);
 

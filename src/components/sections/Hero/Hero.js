@@ -50,7 +50,7 @@ const Hero = ({ reference }) => {
   return (
     <BackgroundImage id="hero" fluid={bgImage} backgroundColor="#41A1B1">
       <NavBar />
-      <StyledWrapper ref={reference}>
+      <StyledWrapper>
         <StyledContent>
           <Image fluid={heroImg} alt="img" />
           <h1>Kamil Partyka</h1>
@@ -67,7 +67,7 @@ const Hero = ({ reference }) => {
             <button
               type="button"
               title="Contact"
-              onClick={() => scrollTo('#contact', 'center')}
+              onClick={() => scrollTo('#contact')}
             >
               <FontAwesomeIcon icon={faEnvelopeSquare} />
             </button>
@@ -81,7 +81,10 @@ const Hero = ({ reference }) => {
             </a>
           </StyledIconsWrapper>
         </StyledContent>
-        <StyledArrows onClick={() => scrollTo('#aboutMe', 'center')}>
+        <StyledArrows
+          ref={reference}
+          onClick={() => scrollTo('#aboutMe', 'center')}
+        >
           <FontAwesomeIcon id="arrow1" icon={faChevronDown} />
           <FontAwesomeIcon id="arrow2" icon={faChevronDown} />
         </StyledArrows>
