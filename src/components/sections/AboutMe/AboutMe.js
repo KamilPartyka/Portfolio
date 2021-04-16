@@ -32,15 +32,18 @@ const AboutMe = () => {
           <Image fluid={portraitImg} />
           <StyledText>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-              accumsan, tortor eu porttitor pulvinar, nulla libero fringilla
-              neque, in sagittis odio erat sed ligula. Praesent mauris sem,
-              sollicitudin non volutpat in, bibendum vel ante. Nullam mollis
-              pharetra tempus. Nulla lobortis lorem risus, eu dignissim neque
-              ornare vel. Donec tristique arcu id tristique accumsan. Sed
-              efficitur nunc libero, a efficitur mauris venenatis malesuada.
-              Nulla consectetur, libero et rutrum varius, nunc quam consectetur
-              tellus, elementum ornare risus risus ac lectus.
+              Hello, I&apos;m Kamil Partyka, I&apos;m interested in technology,
+              street photography, portrait photography and front-end
+              technologies that I&apos;ve been learning for over a year.
+              <br />
+              I am familiar with semantic HTML5 and formatting its elements, and
+              creating layouts, using CSS. I know BEM methodology, JavaScript
+              basics with ES6+ elements, ReactJS and GatsbyJS basics with Styled
+              Components or CSS Modules. I can also use Git version control
+              system (GitHub, GitLab).
+              <br />I believe that a full-time job as a front-end developer will
+              allow me to further develop my skills in front-end technologies,
+              communication and design.
             </p>
             <FontAwesomeIcon id="codeIcon" icon={faCode} />
           </StyledText>

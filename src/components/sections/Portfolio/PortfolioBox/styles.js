@@ -69,7 +69,7 @@ export const StyledHover = styled.div`
         transition: transform 0.5s;
         
           :hover{
-            transform: translateY(-10px);
+            transform: translateY(-2rem);
           }
       }
   `}

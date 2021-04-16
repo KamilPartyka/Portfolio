@@ -56,7 +56,7 @@ export const StyledText = styled.div`
 
   p {
     font-size: 1.8rem;
-    line-height: 2.1rem;
+    line-height: 2.2rem;
     text-align: justify;
     color: ${({ theme }) => theme.colors.white};
     text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
@@ -79,7 +79,7 @@ export const StyledText = styled.div`
 
     font-size: 20rem;
     color: ${({ theme }) => theme.colors.white};
-    opacity: 0.4;
+    opacity: 0.3;
 
     ${breakpoint('md')`
       left: -8rem;
