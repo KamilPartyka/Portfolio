@@ -1,11 +1,11 @@
 module.exports = {
-  pathPrefix: `/Portfolio`,
+  pathPrefix: '/Portfolio',
   plugins: [
     'gatsby-plugin-styled-components',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     'gatsby-plugin-resolve-src',
-    `gatsby-plugin-smoothscroll`,
+    'gatsby-plugin-smoothscroll',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -14,11 +14,11 @@ module.exports = {
       },
       __key: 'images',
     },
-    `gatsby-transformer-json`,
+    'gatsby-transformer-json',
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        path: `./src/data/`,
+        path: './src/data/',
       },
     },
   ],
