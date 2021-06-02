@@ -1,5 +1,5 @@
 module.exports = {
-  pathPrefix: '/Portfolio',
+  pathPrefix: `/Portfolio`,
   plugins: [
     'gatsby-plugin-styled-components',
     'gatsby-plugin-sharp',
