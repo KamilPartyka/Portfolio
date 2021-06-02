@@ -92,6 +92,9 @@ const Contact = () => {
       handleClearForm();
     } else {
       // not send
+
+      setsendingMsg('Message could not be sent');
+      setTimeout(() => setsendingMsg(null), 3000);
     }
   };
 

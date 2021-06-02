@@ -36,11 +36,10 @@ const AboutMe = () => {
               street photography, portrait photography and front-end
               technologies that I&apos;ve been learning for over a year.
               <br />
-              I am familiar with semantic HTML5 and formatting its elements, and
-              creating layouts, using CSS. I know BEM methodology, JavaScript
-              basics with ES6+ elements, ReactJS and GatsbyJS basics with Styled
-              Components or CSS Modules. I can also use Git version control
-              system (GitHub, GitLab).
+              I am familiar with semantic HTML5 and CSS. I know BEM methodology,
+              JavaScript basics with ES6+ elements, ReactJS and GatsbyJS basics
+              with Styled Components or CSS Modules. I can also use Git version
+              control system (GitHub, GitLab).
               <br />I believe that a full-time job as a front-end developer will
               allow me to further develop my skills in front-end technologies,
               communication and design.

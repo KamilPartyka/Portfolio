@@ -5,6 +5,12 @@
     "description": "The currently viewed webpage, created using Gatsby.js, React Hooks and Styled Components"
   },
   {
+    "webLink": "https://kamilpartyka.github.io/react-weather-app/",
+    "gitLink": "https://github.com/KamilPartyka/react-weather-app",
+    "image": "../images/pages/weatherPage.png",
+    "description": "Weather app created using React and Styled Components from 'OpenWeather' API"
+  },
+  {
     "webLink": "https://stacon.net.pl/",
     "gitLink": "https://github.com/KamilPartyka/Stacon-2.0",
     "image": "../images/pages/staconPage.png",
