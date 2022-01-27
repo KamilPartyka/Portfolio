@@ -125,7 +125,7 @@ const Contact = () => {
                 errorMsg={formState.errors.message}
               />
 
-              <StyledButton type="submit">Sumbit</StyledButton>
+              <StyledButton type="submit">Submit</StyledButton>
               {sendingMsg && (
                 <StyledSend>
                   <h2>{sendingMsg}</h2>
