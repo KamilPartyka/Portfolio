@@ -1,5 +1,4 @@
 import styled, { css } from 'styled-components';
-import breakpoint from 'styled-components-breakpoint';
 
 export const StyledWrapper = styled.div`
   position: fixed;
@@ -7,9 +6,9 @@ export const StyledWrapper = styled.div`
   right: 0;
   z-index: 20;
 
-  ${breakpoint('lg')`
+  ${({ theme }) => theme.breakpoints.up('lg')} {
     display: none;
-  `}
+  }
 `;
 
 export const StyledHamburger = styled.button`

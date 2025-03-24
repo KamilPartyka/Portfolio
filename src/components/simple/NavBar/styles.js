@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import breakpoint from 'styled-components-breakpoint';
 
 export const StyledWrapper = styled.header`
   display: none;
@@ -7,9 +6,9 @@ export const StyledWrapper = styled.header`
   width: 100%;
   justify-content: flex-end;
 
-  ${breakpoint('lg')`
+  ${({ theme }) => theme.breakpoints.up('lg')} {
     display: flex;
-  `}
+  }
 `;
 export const StyledListWrapper = styled.nav`
   padding: 3rem 2rem 0 0;

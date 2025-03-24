@@ -1,5 +1,4 @@
-import styled from 'styled-components';
-import breakpoint from 'styled-components-breakpoint';
+import styled, {css} from 'styled-components';
 
 const StyledToTopArrow = styled.div`
   @keyframes toUp {
@@ -39,9 +38,9 @@ const StyledToTopArrow = styled.div`
     font-size: 6rem;
     display: none;
 
-    ${breakpoint('lg')`
+    ${({ theme }) => theme.breakpoints.up('lg')} {
       display: inline;
-    `}
+    }
   }
 
   button {

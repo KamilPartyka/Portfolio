@@ -1,7 +1,7 @@
 import React from 'react';
 
 import PropTypes from 'prop-types';
-import BackgroundImage from 'gatsby-background-image';
+// import BackgroundImage from 'gatsby-background-image';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLink } from '@fortawesome/free-solid-svg-icons';
@@ -44,9 +44,9 @@ const PortfolioBox = ({ webLink, gitLink, image, description }) => {
       <StyledInnerWrapper>
         <StyledImageWrapper>
           <StyledHover id="hover">{links()}</StyledHover>
-          <BackgroundImage id="pageImg" fluid={image}>
+          {/* <BackgroundImage id="pageImg" fluid={image}> */}
             <StyledImage />
-          </BackgroundImage>
+          {/* </BackgroundImage> */}
         </StyledImageWrapper>
         <StyledText>
           <p>{description}</p>

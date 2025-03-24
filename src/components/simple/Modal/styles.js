@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import breakpoint from 'styled-components-breakpoint';
 
 export const StyledModalWrapper = styled.div`
   @keyframes appear {
@@ -77,8 +76,8 @@ export const StyledModal = styled.div`
       display: none;
     }
 
-    ${breakpoint('md')`
-       font-size: 30rem;
-    `}
+    ${({ theme }) => theme.breakpoints.up('md')} {
+      font-size: 30rem;
+    }
   }
 `;

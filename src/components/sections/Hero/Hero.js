@@ -7,7 +7,7 @@ import Bevel from 'components/simple/Bevel/Bevel';
 
 import { graphql, useStaticQuery } from 'gatsby';
 import Image from 'gatsby-image';
-import BackgroundImage from 'gatsby-background-image';
+// import BackgroundImage from 'gatsby-background-image';
 import scrollTo from 'gatsby-plugin-smoothscroll';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -48,7 +48,8 @@ const Hero = ({ reference }) => {
   const heroImg = data.heroImg.childImageSharp.fluid;
 
   return (
-    <BackgroundImage id="hero" fluid={bgImage} backgroundColor="#41A1B1">
+    // <BackgroundImage id="hero" fluid={bgImage} backgroundColor="#41A1B1">
+    <>
       <NavBar />
       <StyledWrapper>
         <StyledContent>
@@ -90,7 +91,8 @@ const Hero = ({ reference }) => {
         </StyledArrows>
       </StyledWrapper>
       <Bevel />
-    </BackgroundImage>
+      </>
+    // </BackgroundImage>
   );
 };
 
