@@ -1,13 +1,10 @@
 import React from 'react';
 
 import PropTypes from 'prop-types';
-
+import { StaticImage } from 'gatsby-plugin-image';
 import NavBar from 'components/simple/NavBar/NavBar';
 import Bevel from 'components/simple/Bevel/Bevel';
 
-import { graphql, useStaticQuery } from 'gatsby';
-import Image from 'gatsby-image';
-// import BackgroundImage from 'gatsby-background-image';
 import scrollTo from 'gatsby-plugin-smoothscroll';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -24,36 +21,35 @@ import {
 } from './styles';
 
 const Hero = ({ reference }) => {
-  const data = useStaticQuery(
-    graphql`
-      query {
-        bgImage: file(relativePath: { eq: "hero-bg.png" }) {
-          childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid_withWebp
-            }
-          }
-        }
-        heroImg: file(relativePath: { eq: "KamilPartykaAva.jpg" }) {
-          childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid_withWebp
-            }
-          }
-        }
-      }
-    `
-  );
-  const bgImage = data.bgImage.childImageSharp.fluid;
-  const heroImg = data.heroImg.childImageSharp.fluid;
-
   return (
-    // <BackgroundImage id="hero" fluid={bgImage} backgroundColor="#41A1B1">
     <>
+      <StaticImage
+        id="hero"
+        src="../../../images/hero-bg.png"
+        backgroundColor="#41A1B1"
+        formats={['webp', 'auto']}
+        alt="img"
+        quality={100}
+        placeholder="blurred"
+        style={{
+          position: 'absolute',
+          width: '100%',
+          height: '110%',
+          zIndex: -1,
+        }}
+      />
       <NavBar />
       <StyledWrapper>
         <StyledContent>
-          <Image fluid={heroImg} alt="img" />
+          <StaticImage
+            src="../../../images/KamilPartykaAva.jpg"
+            width={300}
+            height={300}
+            formats={['webp', 'auto']}
+            alt="img"
+            quality={100}
+            placeholder="blurred"
+          />
           <h1>Kamil Partyka</h1>
           <h2>Front-end Developer</h2>
           <StyledIconsWrapper>
@@ -91,8 +87,7 @@ const Hero = ({ reference }) => {
         </StyledArrows>
       </StyledWrapper>
       <Bevel />
-      </>
-    // </BackgroundImage>
+    </>
   );
 };
 

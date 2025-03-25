@@ -1,6 +1,6 @@
-import styled, {css} from 'styled-components';
+import styled, { css } from 'styled-components';
 
-export const StyledWrapper = styled.div`
+export const StyledWrapper = styled.section`
   ${({ theme }) => css`
     display: flex;
     align-items: center;

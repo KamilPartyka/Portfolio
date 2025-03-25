@@ -14,11 +14,12 @@ import {
   StyledImage,
   StyledText,
 } from './styles';
+import { GatsbyImage } from 'gatsby-plugin-image';
 
 const PortfolioBox = ({ webLink, gitLink, image, description }) => {
   const links = () => (
     <div>
-      {webLink && (
+      {webLink ? (
         <a
           href={webLink}
           target="_blank"
@@ -27,7 +28,7 @@ const PortfolioBox = ({ webLink, gitLink, image, description }) => {
         >
           <FontAwesomeIcon icon={faLink} />
         </a>
-      )}
+      ) : null}
       <a
         href={gitLink}
         target="_blank"
@@ -44,9 +45,19 @@ const PortfolioBox = ({ webLink, gitLink, image, description }) => {
       <StyledInnerWrapper>
         <StyledImageWrapper>
           <StyledHover id="hover">{links()}</StyledHover>
-          {/* <BackgroundImage id="pageImg" fluid={image}> */}
-            <StyledImage />
-          {/* </BackgroundImage> */}
+          <GatsbyImage
+            image={image}
+            formats={['webp', 'auto']}
+            alt="img"
+            quality={100}
+            placeholder="blurred"
+            style={{
+              position: 'absolute',
+              width: '100%',
+              height: '100%',
+            }}
+          />
+          <StyledImage />
         </StyledImageWrapper>
         <StyledText>
           <p>{description}</p>

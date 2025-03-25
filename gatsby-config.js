@@ -1,4 +1,4 @@
-module.exports = {
+const config = {
   pathPrefix: `/Portfolio`,
   plugins: [
     'gatsby-plugin-styled-components',
@@ -6,11 +6,12 @@ module.exports = {
     'gatsby-transformer-sharp',
     'gatsby-plugin-resolve-src',
     'gatsby-plugin-smoothscroll',
+    'gatsby-plugin-image',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'images',
-        path: './src/images/',
+        path: './src/images',
       },
       __key: 'images',
     },
@@ -23,3 +24,5 @@ module.exports = {
     },
   ],
 };
+
+export default config;

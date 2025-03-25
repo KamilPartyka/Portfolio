@@ -27,9 +27,7 @@ const Portfolio = () => {
           webLink
           image {
             childImageSharp {
-              fluid {
-                ...GatsbyImageSharpFluid_withWebp
-              }
+              gatsbyImageData
             }
           }
         }
@@ -50,14 +48,14 @@ const Portfolio = () => {
           </div>
           <StyledItemsWrapper>
             {portfolioItemsArr.map((item) => {
-              const { id, webLink, gitLink, description } = item;
-              const image = item.image.childImageSharp.fluid;
+              const { id, webLink, gitLink, description, image } = item;
+              const imageLink = image.childImageSharp.gatsbyImageData;
               return (
                 <PortfolioBox
                   key={id}
                   webLink={webLink}
                   gitLink={gitLink}
-                  image={image}
+                  image={imageLink}
                   description={description}
                 />
               );
