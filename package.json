@@ -3,6 +3,7 @@
   "version": "2.0.0",
   "private": true,
   "description": "Portfolio",
+  "author": "Kamil Partyka",
   "scripts": {
     "develop": "gatsby develop",
     "start": "gatsby develop",
@@ -11,6 +12,9 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "deploy": "npm run build:production && gh-pages -d public"
+  },
+  "engines": {
+    "node": ">=22"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.4",
