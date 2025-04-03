@@ -2,8 +2,7 @@ import styled, { css } from 'styled-components';
 
 export const StyledWrapper = styled.div`
   display: flex;
-  justify-content: ${({ secondary }) =>
-    secondary ? css`flex-end` : css`flex-start`};
+  justify-content: ${({ secondary }) => (secondary ? css`flex-end` : css`flex-start`)};
 `;
 
 export const StyledHeader = styled.h2`
@@ -13,14 +12,12 @@ export const StyledHeader = styled.h2`
     display: inline-block;
     z-index: 1;
     margin: 2rem 4rem;
-    color: ${({ theme }) => theme.colors.dark};
+    color: ${theme.colors.dark};
 
     ::before {
       content: '';
       position: absolute;
-      background-color: ${secondary
-        ? theme.colors.yellow
-        : theme.colors.lightYellow};
+      background-color: ${secondary ? theme.colors.yellow : theme.colors.lightYellow};
       width: 100%;
       height: 100%;
       left: ${secondary ? css`2.5rem` : css`-2.5rem`};

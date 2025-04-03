@@ -7,13 +7,7 @@ import Input from 'components/simple/Input/Input';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import StyledButton from 'components/simple/Button/styles';
-import {
-  StyledWrapper,
-  StyledInnerWrapper,
-  StyledFormWrapper,
-  StyledForm,
-  StyledSend,
-} from './styles';
+import { StyledWrapper, StyledInnerWrapper, StyledFormWrapper, StyledForm, StyledSend } from './styles';
 
 const Contact = () => {
   const [formState, setFormState] = useState({
@@ -101,32 +95,38 @@ const Contact = () => {
 
   return (
     <>
-      <Bevel isBlue isReverse />
-      <StyledWrapper id="contact">
+      <Bevel
+        isBlue
+        isReverse
+      />
+      <StyledWrapper id='contact'>
         <StyledInnerWrapper>
-          <Header title="Contact" />
+          <Header title='Contact' />
           <StyledFormWrapper>
-            <StyledForm onSubmit={handleFormSubmit} autoComplete="off">
+            <StyledForm
+              onSubmit={handleFormSubmit}
+              autoComplete='off'
+            >
               <Input
-                label="Your mail:"
-                name="email"
-                placeholder="Please write mail to response"
+                label='Your mail:'
+                name='email'
+                placeholder='Please write mail to response'
                 onChange={handleInputChange}
                 value={formState.fields.email}
                 errorMsg={formState.errors.email}
               />
               <Input
                 isTextarea
-                label="How can I help You?"
-                name="message"
-                placeholder="Please write your message here"
+                label='How can I help You?'
+                name='message'
+                placeholder='Please write your message here'
                 maxLength={250}
                 onChange={handleInputChange}
                 value={formState.fields.message}
                 errorMsg={formState.errors.message}
               />
 
-              <StyledButton type="submit">Submit</StyledButton>
+              <StyledButton type='submit'>Submit</StyledButton>
               {sendingMsg && (
                 <StyledSend>
                   <h2>{sendingMsg}</h2>

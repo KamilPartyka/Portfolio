@@ -5,7 +5,10 @@ import PropTypes from 'prop-types';
 import StyledBevel from './styles';
 
 const Bevel = ({ isReverse, isBlue }) => (
-  <StyledBevel isReverse={isReverse} isBlue={isBlue} />
+  <StyledBevel
+    isReverse={isReverse}
+    isBlue={isBlue}
+  />
 );
 
 Bevel.propTypes = {

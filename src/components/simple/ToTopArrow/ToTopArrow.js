@@ -9,8 +9,8 @@ import StyledToTopArrow from './styles';
 const ToTopArrow = () => (
   <StyledToTopArrow>
     <button
-      type="button"
-      title="Back to top"
+      type='button'
+      title='Back to top'
       onClick={() => scrollTo('#hero', 'start')}
     >
       <FontAwesomeIcon icon={faAngleDoubleUp} />

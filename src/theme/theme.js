@@ -20,12 +20,12 @@ const theme = {
   },
   breakpoints: {
     values: {
-    xs: 0,
-    sm: 576,
-    md: 768,
-    lg: 992,
-    xl: 1200,
-    xxl: 1700,
+      xs: 0,
+      sm: 576,
+      md: 768,
+      lg: 992,
+      xl: 1200,
+      xxl: 1700,
     },
     up: (key) => {
       const value = theme.breakpoints.values[key];
@@ -42,15 +42,10 @@ const theme = {
   },
 };
 
-const Theme = ({ children }) => (
-  <ThemeProvider theme={theme}>{children}</ThemeProvider>
-);
+const Theme = ({ children }) => <ThemeProvider theme={theme}>{children}</ThemeProvider>;
 
 Theme.propTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node,
-  ]).isRequired,
+  children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]).isRequired,
 };
 
 export default Theme;

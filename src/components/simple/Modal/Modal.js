@@ -13,7 +13,11 @@ const Modal = ({ callbackFn }) => (
   <StyledModalWrapper>
     <StyledModal>
       <h2>It&apos;s a Secret to Everybody.</h2>
-      <img src={rupee} alt="Rupee" title="Rupee" />
+      <img
+        src={rupee}
+        alt='Rupee'
+        title='Rupee'
+      />
       <h3>
         Thanks for visiting! <br />
         Have a good day

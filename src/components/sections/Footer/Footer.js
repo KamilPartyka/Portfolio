@@ -11,7 +11,10 @@ const Footer = ({ callbackFn }) => (
     <Bevel isReverse />
     <StyledFooter>
       <p>
-        <button type="button" onClick={() => callbackFn()}>
+        <button
+          type='button'
+          onClick={() => callbackFn()}
+        >
           Code with <span>&#9829;</span>
         </button>
         {new Date().getFullYear()} Kamil Partyka

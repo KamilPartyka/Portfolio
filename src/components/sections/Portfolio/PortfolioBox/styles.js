@@ -1,4 +1,4 @@
-import styled, {css} from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const StyledWrapper = styled.div`
   ${({ theme }) => css`
@@ -58,7 +58,10 @@ export const StyledHover = styled.div`
       opacity: 0;
       height: 0;
       background: transparent;
-      transition: height 0.5s, opacity 0.3s, background-color 0.7s;
+      transition:
+        height 0.5s,
+        opacity 0.3s,
+        background-color 0.7s;
 
       display: flex;
       align-items: center;

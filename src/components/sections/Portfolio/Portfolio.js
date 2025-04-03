@@ -9,12 +9,7 @@ import PortfolioBox from 'components/sections/Portfolio/PortfolioBox/PortfolioBo
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFileCode } from '@fortawesome/free-regular-svg-icons';
 import { faLaptopCode } from '@fortawesome/free-solid-svg-icons';
-import {
-  StyledWrapper,
-  StyledInnerWrapper,
-  StyledItemsWrapper,
-  StyledSvgWrapper,
-} from './styles';
+import { StyledWrapper, StyledInnerWrapper, StyledItemsWrapper, StyledSvgWrapper } from './styles';
 
 const Portfolio = () => {
   const data = useStaticQuery(graphql`
@@ -42,9 +37,15 @@ const Portfolio = () => {
       <Bevel isReverse />
       <StyledWrapper>
         <StyledInnerWrapper>
-          <div id="portfolio">
-            <Header secondary title="Portfolio" />
-            <FontAwesomeIcon id="fileIcon" icon={faFileCode} />
+          <div id='portfolio'>
+            <Header
+              secondary
+              title='Portfolio'
+            />
+            <FontAwesomeIcon
+              id='fileIcon'
+              icon={faFileCode}
+            />
           </div>
           <StyledItemsWrapper>
             {portfolioItemsArr.map((item) => {
@@ -63,7 +64,10 @@ const Portfolio = () => {
           </StyledItemsWrapper>
         </StyledInnerWrapper>
         <StyledSvgWrapper>
-          <FontAwesomeIcon id="fileIcon" icon={faLaptopCode} />
+          <FontAwesomeIcon
+            id='fileIcon'
+            icon={faLaptopCode}
+          />
         </StyledSvgWrapper>
       </StyledWrapper>
     </>

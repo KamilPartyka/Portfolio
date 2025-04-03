@@ -2,23 +2,9 @@ import React from 'react';
 
 import PropTypes from 'prop-types';
 
-import {
-  StyledLabel,
-  StyledInput,
-  StyledTextarea,
-  StyledErrorMsg,
-} from './styles';
+import { StyledLabel, StyledInput, StyledTextarea, StyledErrorMsg } from './styles';
 
-const Input = ({
-  isTextarea,
-  label,
-  name,
-  placeholder,
-  maxLength,
-  errorMsg,
-  onChange,
-  value,
-}) => (
+const Input = ({ isTextarea, label, name, placeholder, maxLength, errorMsg, onChange, value }) => (
   <>
     <StyledLabel htmlFor={name}>{label}</StyledLabel>
     {isTextarea ? (

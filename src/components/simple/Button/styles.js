@@ -1,4 +1,4 @@
-import styled, {css} from 'styled-components';
+import styled, { css } from 'styled-components';
 
 const StyledButton = styled.button`
   ${({ theme }) => css`
@@ -12,7 +12,9 @@ const StyledButton = styled.button`
     border: none;
     z-index: 1;
     cursor: pointer;
-    transition: background-color 200ms, color 200ms;
+    transition:
+      background-color 200ms,
+      color 200ms;
 
     :active {
       outline: none;

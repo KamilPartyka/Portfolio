@@ -38,15 +38,15 @@ const IndexPage = () => {
       {({ inView, ref }) => (
         <Theme>
           <Helmet>
-            <html lang="en" />
+            <html lang='en' />
             <title>Kamil Partyka</title>
             <link
-              href="https://fonts.googleapis.com/css2?family=Cambo&display=swap"
-              rel="stylesheet"
+              href='https://fonts.googleapis.com/css2?family=Cambo&display=swap'
+              rel='stylesheet'
             />
             <link
-              href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
-              rel="stylesheet"
+              href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap'
+              rel='stylesheet'
             />
           </Helmet>
           <GlobalStyles />

@@ -16,22 +16,34 @@ const SideBarNavigation = ({ callbackFn, isSideNavActive }) => {
       <StyledListWrapper>
         <StyledList>
           <li>
-            <button type="button" onClick={() => handleClick('#hero')}>
+            <button
+              type='button'
+              onClick={() => handleClick('#hero')}
+            >
               Home
             </button>
           </li>
           <li>
-            <button type="button" onClick={() => handleClick('#aboutMe')}>
+            <button
+              type='button'
+              onClick={() => handleClick('#aboutMe')}
+            >
               About me
             </button>
           </li>
           <li>
-            <button type="button" onClick={() => handleClick('#portfolio')}>
+            <button
+              type='button'
+              onClick={() => handleClick('#portfolio')}
+            >
               Portfolio
             </button>
           </li>
           <li>
-            <button type="button" onClick={() => handleClick('#contact')}>
+            <button
+              type='button'
+              onClick={() => handleClick('#contact')}
+            >
               Contact
             </button>
           </li>

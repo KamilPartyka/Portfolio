@@ -7,10 +7,7 @@ import StyledButton from './styles';
 const Button = ({ children }) => <StyledButton>{children}</StyledButton>;
 
 Button.propTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node,
-  ]).isRequired,
+  children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]).isRequired,
 };
 
 export default Button;

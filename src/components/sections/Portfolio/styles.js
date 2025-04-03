@@ -1,13 +1,13 @@
-import styled, {css} from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const StyledWrapper = styled.section`
   ${({ theme }) => css`
     margin: 0;
-    margin-top: -${({ theme }) => theme.bacelHeight.mobile};
-    background-color: ${({ theme }) => theme.colors.blue};
+    margin-top: -${theme.bacelHeight.mobile};
+    background-color: ${theme.colors.blue};
 
     ${theme.breakpoints.up('lg')} {
-      margin-top: -${({ theme }) => theme.bacelHeight.desktop};
+      margin-top: -${theme.bacelHeight.desktop};
     }
   `}
 `;
@@ -25,7 +25,7 @@ export const StyledSvgWrapper = styled.div`
       svg {
         display: block;
         font-size: 20rem;
-        color: ${({ theme }) => theme.colors.white};
+        color: ${theme.colors.white};
         opacity: 0.4;
         position: absolute;
         bottom: 1rem;
@@ -47,7 +47,7 @@ export const StyledInnerWrapper = styled.div`
 
     > div {
       position: relative;
-      padding-top: ${({ theme }) => theme.bacelHeight.mobile};
+      padding-top: ${theme.bacelHeight.mobile};
 
       #fileIcon {
         position: absolute;
@@ -55,7 +55,7 @@ export const StyledInnerWrapper = styled.div`
         right: 18rem;
 
         font-size: 12rem;
-        color: ${({ theme }) => theme.colors.white};
+        color: ${theme.colors.white};
         opacity: 0.4;
 
         transform: rotate(20deg);
@@ -89,6 +89,6 @@ export const StyledItemsWrapper = styled.div`
     ${theme.breakpoints.up('md')} {
       margin: 0;
       flex-direction: row;
-    } ;
+    }
   `}
 `;

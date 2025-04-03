@@ -2,12 +2,7 @@ import React from 'react';
 
 import PropTypes from 'prop-types';
 
-import {
-  StyledWrapper,
-  StyledHamburger,
-  StyledHamburgeBox,
-  StyledHamburgeBoxInner,
-} from './styles';
+import { StyledWrapper, StyledHamburger, StyledHamburgeBox, StyledHamburgeBoxInner } from './styles';
 
 const Hamburger = ({ callbackFn, isSideNavActive }) => (
   <StyledWrapper>

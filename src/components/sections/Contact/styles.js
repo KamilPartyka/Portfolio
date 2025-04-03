@@ -1,4 +1,4 @@
-import styled, {css} from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const StyledWrapper = styled.section`
   ${({ theme }) => css`
@@ -14,7 +14,7 @@ export const StyledWrapper = styled.section`
 
 export const StyledInnerWrapper = styled.div`
   ${({ theme }) => css`
-    padding-top: ${({ theme }) => theme.bacelHeight.mobile};
+    padding-top: ${theme.bacelHeight.mobile};
 
     ${theme.breakpoints.up('sm')} {
       margin: 0 4rem;
@@ -27,14 +27,14 @@ export const StyledInnerWrapper = styled.div`
     }
 
     ${theme.breakpoints.up('lg')} {
-      padding-top: calc(${({ theme }) => theme.bacelHeight.desktop} + 2rem);
+      padding-top: calc(${theme.bacelHeight.desktop} + 2rem);
     }
   `}
 `;
 
 export const StyledFormWrapper = styled.div`
   ${({ theme }) => css`
-    background-color: ${({ theme }) => theme.colors.blue};
+    background-color: ${theme.colors.blue};
     padding: 2rem;
     margin: 1rem;
     box-shadow: 1px 1px 20px 5px rgba(0, 0, 0, 0.25);
@@ -76,7 +76,7 @@ export const StyledForm = styled.form`
       z-index: 0;
       font-size: 11rem;
       opacity: 0.4;
-      color: ${({ theme }) => theme.colors.white};
+      color: ${theme.colors.white};
       transform: rotate(-10deg);
 
       ${theme.breakpoints.up('sm')} {

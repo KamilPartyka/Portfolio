@@ -5,8 +5,7 @@ const StyledBevel = styled.div`
     width: 100%;
     height: ${theme.bacelHeight.mobile};
 
-    background-color: ${({ isBlue }) =>
-      isBlue ? theme.colors.blue : theme.colors.gray};
+    background-color: ${({ isBlue }) => (isBlue ? theme.colors.blue : theme.colors.gray)};
 
     clip-path: ${({ isReverse }) =>
       isReverse

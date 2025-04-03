@@ -6,15 +6,8 @@ import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLink } from '@fortawesome/free-solid-svg-icons';
 import { faGitAlt } from '@fortawesome/free-brands-svg-icons';
-import {
-  StyledWrapper,
-  StyledInnerWrapper,
-  StyledImageWrapper,
-  StyledHover,
-  StyledImage,
-  StyledText,
-} from './styles';
 import { GatsbyImage } from 'gatsby-plugin-image';
+import { StyledWrapper, StyledInnerWrapper, StyledImageWrapper, StyledHover, StyledImage, StyledText } from './styles';
 
 const PortfolioBox = ({ webLink, gitLink, image, description }) => {
   const links = () => (
@@ -22,18 +15,18 @@ const PortfolioBox = ({ webLink, gitLink, image, description }) => {
       {webLink ? (
         <a
           href={webLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          title="Link"
+          target='_blank'
+          rel='noopener noreferrer'
+          title='Link'
         >
           <FontAwesomeIcon icon={faLink} />
         </a>
       ) : null}
       <a
         href={gitLink}
-        target="_blank"
-        rel="noopener noreferrer"
-        title="GitHub"
+        target='_blank'
+        rel='noopener noreferrer'
+        title='GitHub'
       >
         <FontAwesomeIcon icon={faGitAlt} />
       </a>
@@ -44,13 +37,13 @@ const PortfolioBox = ({ webLink, gitLink, image, description }) => {
     <StyledWrapper>
       <StyledInnerWrapper>
         <StyledImageWrapper>
-          <StyledHover id="hover">{links()}</StyledHover>
+          <StyledHover id='hover'>{links()}</StyledHover>
           <GatsbyImage
             image={image}
             formats={['webp', 'auto']}
-            alt="img"
+            alt='img'
             quality={100}
-            placeholder="blurred"
+            placeholder='blurred'
             style={{
               position: 'absolute',
               width: '100%',
