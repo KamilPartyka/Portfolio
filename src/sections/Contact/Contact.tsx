@@ -1,8 +1,8 @@
 import React, { ChangeEvent, useState } from 'react';
 
-import Bevel from 'components/Bevel/Bevel';
-import Header from 'components/Header/Header';
-import Input from 'components/Input/Input';
+import Bevel from 'components/Bevel';
+import Header from 'components/Header';
+import Input from 'components/Input';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
@@ -54,9 +54,7 @@ const Contact = () => {
       message: '',
     };
 
-    // eslint-disable-next-line prefer-regex-literals
     const pattern = new RegExp(
-      // eslint-disable-next-line no-useless-escape
       /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
     ); // from https://emailregex.com/
 
@@ -85,21 +83,21 @@ const Contact = () => {
     return isFormValid;
   };
 
-  const handleFormSubmit = (e: Event) => {
+  const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     if (validateForm()) {
       // send
 
       setSendingMsg('Message sent successfully');
-      setTimeout(() => setSendingMsg(null), 3000);
+      setTimeout(() => setSendingMsg(null), 2000);
 
       handleClearForm();
     } else {
       // not send
 
       setSendingMsg('Message could not be sent');
-      setTimeout(() => setSendingMsg(null), 3000);
+      setTimeout(() => setSendingMsg(null), 2000);
     }
   };
 
@@ -137,11 +135,11 @@ const Contact = () => {
               />
 
               <StyledButton type='submit'>Submit</StyledButton>
-              {sendingMsg && (
+              {sendingMsg ? (
                 <StyledSend>
                   <h2>{sendingMsg}</h2>
                 </StyledSend>
-              )}
+              ) : null}
 
               <FontAwesomeIcon icon={faEnvelope} />
             </StyledForm>

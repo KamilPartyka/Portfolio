@@ -95,7 +95,7 @@ export const StyledSend = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: appear-disappear 3000ms;
+  animation: appear-disappear 2000ms;
   position: absolute;
   bottom: 0;
   top: 0;

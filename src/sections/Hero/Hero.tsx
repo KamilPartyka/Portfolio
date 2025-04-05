@@ -1,8 +1,8 @@
 import React from 'react';
 
 import { StaticImage } from 'gatsby-plugin-image';
-import NavBar from 'components/NavBar/NavBar';
-import Bevel from 'components/Bevel/Bevel';
+import NavBar from 'components/NavBar';
+import Bevel from 'components/Bevel';
 
 import scrollTo from 'gatsby-plugin-smoothscroll';
 

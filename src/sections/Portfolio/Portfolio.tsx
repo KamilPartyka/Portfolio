@@ -2,9 +2,9 @@ import React from 'react';
 
 import { graphql, useStaticQuery } from 'gatsby';
 
-import Bevel from 'components/Bevel/Bevel';
-import Header from 'components/Header/Header';
-import PortfolioBox from 'components/PortfolioBox/PortfolioBox';
+import Bevel from 'components/Bevel';
+import Header from 'components/Header';
+import PortfolioBox from 'components/PortfolioBox';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFileCode } from '@fortawesome/free-regular-svg-icons';

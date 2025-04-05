@@ -31,7 +31,9 @@ export const StyledHamburgerBox = styled.span`
   position: relative;
 `;
 
-export const StyledHamburgerBoxInner = styled.span`
+export const StyledHamburgerBoxInner = styled.span<{
+  isSideNavActive: boolean;
+}>`
   top: 50%;
   transform: translateY(-50%);
   transition: 300ms;

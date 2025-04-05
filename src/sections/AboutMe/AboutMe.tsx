@@ -2,7 +2,7 @@ import React from 'react';
 
 import { StaticImage } from 'gatsby-plugin-image';
 
-import Header from 'components/Header/Header';
+import Header from 'components/Header';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCode } from '@fortawesome/free-solid-svg-icons';
 import { StyledWrapper, StyledInnerWrapper, StyledText } from './styles';
