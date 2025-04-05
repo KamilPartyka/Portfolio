@@ -27,7 +27,7 @@ const StyledToTopArrow = styled.div`
   z-index: 1;
   animation: appear 500ms ease;
 
-  :hover {
+  &:hover {
     svg {
       animation: toUp 1000ms infinite;
     }

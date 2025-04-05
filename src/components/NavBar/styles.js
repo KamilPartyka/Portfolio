@@ -37,7 +37,7 @@ export const StyledList = styled.ul`
       outline: none;
       transition: color 200ms;
 
-      :hover {
+      &:hover {
         cursor: pointer;
         color: ${({ theme }) => theme.colors.yellow};
       }

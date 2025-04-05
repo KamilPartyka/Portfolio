@@ -22,7 +22,7 @@ export const StyledInnerWrapper = styled.div`
   overflow: hidden;
   box-shadow: 0px 4px 20px 2px rgba(0, 0, 0, 0.25);
 
-  :hover {
+  &:hover {
     #hover {
       opacity: 1;
       background: rgba(254, 231, 75, 0.9);
@@ -73,7 +73,7 @@ export const StyledHover = styled.div`
         margin: 3rem;
         transition: transform 0.5s;
 
-        :hover {
+        &:hover {
           transform: translateY(-2rem);
         }
       }

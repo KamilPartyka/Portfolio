@@ -16,12 +16,12 @@ const StyledButton = styled.button`
       background-color 200ms,
       color 200ms;
 
-    :active {
+    &:active {
       outline: none;
       background: ${theme.colors.dark};
       color: ${theme.colors.yellow};
     }
-    :focus {
+    &:focus {
       outline: none;
     }
 

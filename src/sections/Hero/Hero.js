@@ -13,7 +13,7 @@ import { faEnvelopeSquare, faChevronDown } from '@fortawesome/free-solid-svg-ico
 import { StyledWrapper, StyledContent, StyledIconsWrapper, StyledArrows } from './styles';
 
 const Hero = ({ reference }) => (
-  <div style={{ position: 'relative' }}>
+  <section style={{ position: 'relative' }}>
     <StaticImage
       id='hero'
       src='../../images/hero-bg.png'
@@ -84,7 +84,7 @@ const Hero = ({ reference }) => (
       </StyledArrows>
     </StyledWrapper>
     <Bevel />
-  </div>
+  </section>
 );
 
 Hero.propTypes = {

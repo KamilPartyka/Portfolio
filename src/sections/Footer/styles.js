@@ -38,7 +38,7 @@ export const StyledFooter = styled.footer`
           font-size: 2.5rem;
         }
 
-        :hover {
+        &:hover {
           span {
             color: red;
           }

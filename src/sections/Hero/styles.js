@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-export const StyledWrapper = styled.section`
+export const StyledWrapper = styled.div`
   ${({ theme }) => css`
     display: flex;
     align-items: center;
@@ -107,7 +107,7 @@ export const StyledIconsWrapper = styled.div`
         }
 
         @media (hover: hover) {
-          :hover {
+          &:hover {
             cursor: pointer;
             color: ${theme.colors.yellow};
           }

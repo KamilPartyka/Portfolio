@@ -64,7 +64,7 @@ export const StyledList = styled.ul`
       transition: color 200ms;
 
       @media (hover: hover) {
-        :hover {
+        &:hover {
           cursor: pointer;
           color: ${({ theme }) => theme.colors.yellow};
         }
