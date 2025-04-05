@@ -10,7 +10,10 @@ interface FooterProps {
 
 const Footer = ({ callbackFn }: FooterProps) => (
   <StyledWrapper>
-    <Bevel isReverse />
+    <Bevel
+      isReverse
+      color='gray'
+    />
     <StyledFooter>
       <p>
         <button

@@ -3,14 +3,14 @@ import React from 'react';
 import StyledBevel from './styles';
 
 interface BevelProps {
+  color: 'blue' | 'gray';
   isReverse?: boolean;
-  isBlue?: boolean;
 }
 
-const Bevel = ({ isReverse = false, isBlue = false }: BevelProps) => (
+const Bevel = ({ isReverse = false, color }: BevelProps) => (
   <StyledBevel
     isReverse={isReverse}
-    isBlue={isBlue}
+    color={color}
   />
 );
 

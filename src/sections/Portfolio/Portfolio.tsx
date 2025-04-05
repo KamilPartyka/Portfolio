@@ -17,6 +17,14 @@ import {
 } from './styles';
 import { IGatsbyImageData } from 'gatsby-plugin-image';
 
+type PortfolioItem = {
+  id: string;
+  webLink: string;
+  gitLink: string;
+  image: { childImageSharp: { gatsbyImageData: IGatsbyImageData } };
+  description: string;
+};
+
 const Portfolio = () => {
   const data = useStaticQuery(graphql`
     query MyQuery {
@@ -36,17 +44,14 @@ const Portfolio = () => {
     }
   `);
 
-  const portfolioItemsArr: {
-    id: string;
-    webLink: string;
-    gitLink: string;
-    image: { childImageSharp: { gatsbyImageData: IGatsbyImageData } };
-    description: string;
-  }[] = data.allPortfolioItemsJson.nodes;
+  const portfolioItemsArr: PortfolioItem[] = data.allPortfolioItemsJson.nodes;
 
   return (
     <>
-      <Bevel isReverse />
+      <Bevel
+        color='gray'
+        isReverse
+      />
       <StyledWrapper>
         <StyledInnerWrapper>
           <div id='portfolio'>

@@ -105,7 +105,7 @@ const Contact = () => {
   return (
     <>
       <Bevel
-        isBlue
+        color='blue'
         isReverse
       />
       <StyledWrapper id='contact'>

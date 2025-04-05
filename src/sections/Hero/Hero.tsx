@@ -96,7 +96,7 @@ const Hero = ({ reference }: HeroProps) => (
         />
       </StyledArrows>
     </StyledWrapper>
-    <Bevel />
+    <Bevel color='gray' />
   </section>
 );
 
