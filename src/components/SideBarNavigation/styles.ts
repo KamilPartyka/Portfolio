@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-export const StyledWrapper = styled.aside`
+export const StyledWrapper = styled.aside<{ isActive: boolean }>`
   position: fixed;
   left: 0;
   right: 0;

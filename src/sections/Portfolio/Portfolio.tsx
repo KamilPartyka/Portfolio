@@ -9,7 +9,13 @@ import PortfolioBox from 'components/PortfolioBox/PortfolioBox';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFileCode } from '@fortawesome/free-regular-svg-icons';
 import { faLaptopCode } from '@fortawesome/free-solid-svg-icons';
-import { StyledWrapper, StyledInnerWrapper, StyledItemsWrapper, StyledSvgWrapper } from './styles';
+import {
+  StyledWrapper,
+  StyledInnerWrapper,
+  StyledItemsWrapper,
+  StyledSvgWrapper,
+} from './styles';
+import { IGatsbyImageData } from 'gatsby-plugin-image';
 
 const Portfolio = () => {
   const data = useStaticQuery(graphql`
@@ -30,7 +36,13 @@ const Portfolio = () => {
     }
   `);
 
-  const portfolioItemsArr = data.allPortfolioItemsJson.nodes;
+  const portfolioItemsArr: {
+    id: string;
+    webLink: string;
+    gitLink: string;
+    image: { childImageSharp: { gatsbyImageData: IGatsbyImageData } };
+    description: string;
+  }[] = data.allPortfolioItemsJson.nodes;
 
   return (
     <>

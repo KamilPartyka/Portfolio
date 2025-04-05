@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-const StyledButton = styled.button`
+export const StyledButton = styled.button`
   ${({ theme }) => css`
     background: ${theme.colors.yellow};
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
@@ -32,5 +32,3 @@ const StyledButton = styled.button`
     }
   `}
 `;
-
-export default StyledButton;

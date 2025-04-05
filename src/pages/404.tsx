@@ -22,13 +22,13 @@ const StyledWrapper = styled.div`
 
 const NotFoundPage = () => (
   <StyledWrapper>
-      <img
-        src='https://i.giphy.com/media/joV1k1sNOT5xC/giphy.webp'
-        alt='error 404'
-      />
-      <br />
-      <Link to='/'>Back to site</Link>.
-    </StyledWrapper>
+    <img
+      src='https://i.giphy.com/media/joV1k1sNOT5xC/giphy.webp'
+      alt='error 404'
+    />
+    <br />
+    <Link to='/'>Back to site</Link>.
+  </StyledWrapper>
 );
 
 export default NotFoundPage;

@@ -15,7 +15,7 @@ export const StyledLabel = styled.label`
   `}
 `;
 
-export const StyledInput = styled.input`
+export const StyledInput = styled.input<{ errorMsg?: string }>`
   ${({ theme, errorMsg }) => css`
     width: 100%;
     margin: auto;
@@ -53,7 +53,7 @@ export const StyledInput = styled.input`
   `}
 `;
 
-export const StyledTextarea = styled.textarea`
+export const StyledTextarea = styled.textarea<{ errorMsg?: string }>`
   ${({ theme, errorMsg }) => css`
     width: 100%;
     margin: auto;

@@ -1,8 +1,9 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
-import PropTypes from 'prop-types';
 
-const theme = {
+type breakpoints = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl';
+
+export const theme = {
   colors: {
     white: '#FFFFFF',
     dark: '#3D3D3D',
@@ -27,11 +28,11 @@ const theme = {
       xl: 1200,
       xxl: 1700,
     },
-    up: (key) => {
+    up: (key: breakpoints) => {
       const value = theme.breakpoints.values[key];
       return `@media all and (min-width: ${value}px)`;
     },
-    down: (key) => {
+    down: (key: breakpoints) => {
       const value = theme.breakpoints.values[key];
       return `@media all and (max-width: ${value}px)`;
     },
@@ -42,10 +43,8 @@ const theme = {
   },
 };
 
-const Theme = ({ children }) => <ThemeProvider theme={theme}>{children}</ThemeProvider>;
-
-Theme.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]).isRequired,
-};
+const Theme = ({ children }: { children: React.ReactNode }) => (
+  <ThemeProvider theme={theme}>{children}</ThemeProvider>
+);
 
 export default Theme;

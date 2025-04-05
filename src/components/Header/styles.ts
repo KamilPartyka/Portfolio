@@ -1,11 +1,12 @@
 import styled, { css } from 'styled-components';
 
-export const StyledWrapper = styled.div`
+export const StyledWrapper = styled.div<{ secondary?: boolean }>`
   display: flex;
-  justify-content: ${({ secondary }) => (secondary ? 'flex-end' : 'flex-start')};
+  justify-content: ${({ secondary }) =>
+    secondary ? 'flex-end' : 'flex-start'};
 `;
 
-export const StyledHeader = styled.h2`
+export const StyledHeader = styled.h2<{ secondary?: boolean }>`
   ${({ theme, secondary }) => css`
     font-size: 3rem;
     position: relative;
@@ -17,7 +18,9 @@ export const StyledHeader = styled.h2`
     &::before {
       content: '';
       position: absolute;
-      background-color: ${secondary ? theme.colors.yellow : theme.colors.lightYellow};
+      background-color: ${secondary
+        ? theme.colors.yellow
+        : theme.colors.lightYellow};
       width: 100%;
       height: 100%;
       left: ${secondary ? '2.5rem' : '-2.5rem'};

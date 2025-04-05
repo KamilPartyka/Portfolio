@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { ChangeEvent, useState } from 'react';
 
 import Bevel from 'components/Bevel/Bevel';
 import Header from 'components/Header/Header';
@@ -6,8 +6,14 @@ import Input from 'components/Input/Input';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
-import StyledButton from 'components/Button/styles';
-import { StyledWrapper, StyledInnerWrapper, StyledFormWrapper, StyledForm, StyledSend } from './styles';
+import { StyledButton } from 'components/Button/styles';
+import {
+  StyledWrapper,
+  StyledInnerWrapper,
+  StyledFormWrapper,
+  StyledForm,
+  StyledSend,
+} from './styles';
 
 const Contact = () => {
   const [formState, setFormState] = useState({
@@ -15,10 +21,10 @@ const Contact = () => {
     errors: { email: '', message: '' },
   });
 
-  const [sendingMsg, setsendingMsg] = useState(null);
+  const [sendingMsg, setSendingMsg] = useState<string | null>(null);
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
+  const handleInputChange = (e: ChangeEvent) => {
+    const { name, value } = e.target as HTMLInputElement;
     setFormState((prevState) => ({
       ...prevState,
       fields: {
@@ -29,9 +35,10 @@ const Contact = () => {
   };
 
   const handleClearForm = () => {
-    const fields = {};
-    fields.email = '';
-    fields.message = '';
+    const fields = {
+      email: '',
+      message: '',
+    };
     setFormState((prevState) => ({
       ...prevState,
       fields,
@@ -42,7 +49,10 @@ const Contact = () => {
     const { email } = formState.fields;
     const { message } = formState.fields;
     let isFormValid = true;
-    const errors = {};
+    const errors = {
+      email: '',
+      message: '',
+    };
 
     // eslint-disable-next-line prefer-regex-literals
     const pattern = new RegExp(
@@ -75,21 +85,21 @@ const Contact = () => {
     return isFormValid;
   };
 
-  const handleFormSubmit = (e) => {
+  const handleFormSubmit = (e: Event) => {
     e.preventDefault();
 
     if (validateForm()) {
       // send
 
-      setsendingMsg('Message sent successfully');
-      setTimeout(() => setsendingMsg(null), 3000);
+      setSendingMsg('Message sent successfully');
+      setTimeout(() => setSendingMsg(null), 3000);
 
       handleClearForm();
     } else {
       // not send
 
-      setsendingMsg('Message could not be sent');
-      setTimeout(() => setsendingMsg(null), 3000);
+      setSendingMsg('Message could not be sent');
+      setTimeout(() => setSendingMsg(null), 3000);
     }
   };
 

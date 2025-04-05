@@ -1,10 +1,32 @@
 import React from 'react';
 
-import PropTypes from 'prop-types';
+import {
+  StyledLabel,
+  StyledInput,
+  StyledTextarea,
+  StyledErrorMsg,
+} from './styles';
 
-import { StyledLabel, StyledInput, StyledTextarea, StyledErrorMsg } from './styles';
+interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
+  isTextarea?: boolean;
+  label: string;
+  maxLength?: number;
+  errorMsg?: string;
+  onChange: (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => void;
+}
 
-const Input = ({ isTextarea, label, name, placeholder, maxLength, errorMsg, onChange, value }) => (
+const Input = ({
+  isTextarea = false,
+  label,
+  name,
+  placeholder,
+  maxLength = 40,
+  errorMsg = '',
+  onChange,
+  value = '',
+}: InputProps) => (
   <>
     <StyledLabel htmlFor={name}>{label}</StyledLabel>
     {isTextarea ? (
@@ -32,23 +54,5 @@ const Input = ({ isTextarea, label, name, placeholder, maxLength, errorMsg, onCh
     {errorMsg && <StyledErrorMsg>{errorMsg}</StyledErrorMsg>}
   </>
 );
-
-Input.propTypes = {
-  isTextarea: PropTypes.bool,
-  label: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  placeholder: PropTypes.string.isRequired,
-  maxLength: PropTypes.number,
-  errorMsg: PropTypes.string,
-  onChange: PropTypes.func.isRequired,
-  value: PropTypes.string,
-};
-
-Input.defaultProps = {
-  isTextarea: false,
-  maxLength: 40,
-  errorMsg: '',
-  value: '',
-};
 
 export default Input;

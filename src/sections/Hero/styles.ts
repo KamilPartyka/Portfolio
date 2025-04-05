@@ -31,7 +31,8 @@ export const StyledContent = styled.div`
       margin-top: 4rem;
     }
 
-    @media screen and (min-width: ${theme.breakpoints.md}) and (orientation: landscape) {
+    @media screen and (min-width: ${theme.breakpoints.values
+        .md}) and (orientation: landscape) {
       margin-top: 4rem;
     }
 

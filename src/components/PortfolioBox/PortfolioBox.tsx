@@ -1,14 +1,31 @@
 import React from 'react';
 
-import PropTypes from 'prop-types';
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLink } from '@fortawesome/free-solid-svg-icons';
 import { faGitAlt } from '@fortawesome/free-brands-svg-icons';
-import { GatsbyImage } from 'gatsby-plugin-image';
-import { StyledWrapper, StyledInnerWrapper, StyledImageWrapper, StyledHover, StyledImage, StyledText } from './styles';
+import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image';
+import {
+  StyledWrapper,
+  StyledInnerWrapper,
+  StyledImageWrapper,
+  StyledHover,
+  StyledImage,
+  StyledText,
+} from './styles';
 
-const PortfolioBox = ({ webLink, gitLink, image, description }) => {
+interface PortfolioBoxProps {
+  webLink?: string;
+  gitLink: string;
+  description?: string;
+  image: IGatsbyImageData;
+}
+
+const PortfolioBox = ({
+  webLink,
+  gitLink,
+  image,
+  description = 'One of the websites I created',
+}: PortfolioBoxProps) => {
   const links = () => (
     <div>
       {webLink ? (
@@ -39,10 +56,7 @@ const PortfolioBox = ({ webLink, gitLink, image, description }) => {
           <StyledHover id='hover'>{links()}</StyledHover>
           <GatsbyImage
             image={image}
-            formats={['webp', 'auto']}
             alt='img'
-            quality={100}
-            placeholder='blurred'
             style={{
               position: 'absolute',
               width: '100%',
@@ -58,26 +72,6 @@ const PortfolioBox = ({ webLink, gitLink, image, description }) => {
       </StyledInnerWrapper>
     </StyledWrapper>
   );
-};
-
-PortfolioBox.propTypes = {
-  webLink: PropTypes.string,
-  gitLink: PropTypes.string.isRequired,
-  description: PropTypes.string,
-  image: PropTypes.shape({
-    base64: PropTypes.string,
-    aspectRatio: PropTypes.number,
-    src: PropTypes.string,
-    srcSet: PropTypes.string,
-    srcSetType: PropTypes.string,
-    sizes: PropTypes.string,
-    originalImg: PropTypes.string,
-  }).isRequired,
-};
-
-PortfolioBox.defaultProps = {
-  webLink: null,
-  description: 'One of the websites I created',
 };
 
 export default PortfolioBox;

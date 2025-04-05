@@ -1,15 +1,17 @@
 import React from 'react';
 
-import PropTypes from 'prop-types';
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-regular-svg-icons';
 import rupee from 'images/Rupee.png';
-import StyledButton from '../Button/styles';
+import { StyledButton } from '../Button/styles';
 
 import { StyledModalWrapper, StyledModal } from './styles';
 
-const Modal = ({ callbackFn }) => (
+interface ModalProps {
+  callbackFn: () => void;
+}
+
+const Modal = ({ callbackFn }: ModalProps) => (
   <StyledModalWrapper>
     <StyledModal>
       <h2>It&apos;s a Secret to Everybody.</h2>
@@ -27,9 +29,5 @@ const Modal = ({ callbackFn }) => (
     </StyledModal>
   </StyledModalWrapper>
 );
-
-Modal.propTypes = {
-  callbackFn: PropTypes.func.isRequired,
-};
 
 export default Modal;

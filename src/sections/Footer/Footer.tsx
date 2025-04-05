@@ -1,12 +1,14 @@
 import React from 'react';
 
-import PropTypes from 'prop-types';
-
 import Bevel from 'components/Bevel/Bevel';
 
 import { StyledWrapper, StyledFooter } from './styles';
 
-const Footer = ({ callbackFn }) => (
+interface FooterProps {
+  callbackFn: () => void;
+}
+
+const Footer = ({ callbackFn }: FooterProps) => (
   <StyledWrapper>
     <Bevel isReverse />
     <StyledFooter>
@@ -22,9 +24,5 @@ const Footer = ({ callbackFn }) => (
     </StyledFooter>
   </StyledWrapper>
 );
-
-Footer.propTypes = {
-  callbackFn: PropTypes.func.isRequired,
-};
 
 export default Footer;

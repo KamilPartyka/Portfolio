@@ -1,12 +1,19 @@
 import React from 'react';
 
-import PropTypes from 'prop-types';
 import scrollTo from 'gatsby-plugin-smoothscroll';
 
 import { StyledWrapper, StyledListWrapper, StyledList } from './styles';
 
-const SideBarNavigation = ({ callbackFn, isSideNavActive }) => {
-  const handleClick = (to) => {
+interface SideBarNavigationProps {
+  callbackFn: () => void;
+  isSideNavActive?: boolean;
+}
+
+const SideBarNavigation = ({
+  callbackFn,
+  isSideNavActive = false,
+}: SideBarNavigationProps) => {
+  const handleClick = (to: string) => {
     scrollTo(to);
     callbackFn();
   };
@@ -51,15 +58,6 @@ const SideBarNavigation = ({ callbackFn, isSideNavActive }) => {
       </StyledListWrapper>
     </StyledWrapper>
   );
-};
-
-SideBarNavigation.propTypes = {
-  callbackFn: PropTypes.func.isRequired,
-  isSideNavActive: PropTypes.bool,
-};
-
-SideBarNavigation.defaultProps = {
-  isSideNavActive: false,
 };
 
 export default SideBarNavigation;

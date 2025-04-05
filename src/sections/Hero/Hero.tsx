@@ -1,6 +1,5 @@
 import React from 'react';
 
-import PropTypes from 'prop-types';
 import { StaticImage } from 'gatsby-plugin-image';
 import NavBar from 'components/NavBar/NavBar';
 import Bevel from 'components/Bevel/Bevel';
@@ -9,10 +8,24 @@ import scrollTo from 'gatsby-plugin-smoothscroll';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithubSquare } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelopeSquare, faChevronDown } from '@fortawesome/free-solid-svg-icons';
-import { StyledWrapper, StyledContent, StyledIconsWrapper, StyledArrows } from './styles';
+import {
+  faEnvelopeSquare,
+  faChevronDown,
+} from '@fortawesome/free-solid-svg-icons';
+import {
+  StyledWrapper,
+  StyledContent,
+  StyledIconsWrapper,
+  StyledArrows,
+} from './styles';
 
-const Hero = ({ reference }) => (
+interface HeroProps {
+  reference:
+    | React.RefObject<any>
+    | ((node?: Element | null | undefined) => void);
+}
+
+const Hero = ({ reference }: HeroProps) => (
   <section style={{ position: 'relative' }}>
     <StaticImage
       id='hero'
@@ -86,9 +99,5 @@ const Hero = ({ reference }) => (
     <Bevel />
   </section>
 );
-
-Hero.propTypes = {
-  reference: PropTypes.oneOfType([PropTypes.func, PropTypes.shape({ current: PropTypes.instanceOf(Hero) })]).isRequired,
-};
 
 export default Hero;
