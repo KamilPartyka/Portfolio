@@ -88,7 +88,7 @@ npm run deploy
         ...
         └── Button
             ├── Button.tsx
-            ├── style.ts
+            ├── styles.ts
             └── index.ts
 ```
 
