@@ -87,14 +87,15 @@ const Contact = () => {
     e.preventDefault();
 
     if (validateForm()) {
-      // send
+      // success
+      alert('This form is just a demo, so it does not send any message');
 
       setSendingMsg('Message sent successfully');
       setTimeout(() => setSendingMsg(null), 2000);
 
       handleClearForm();
     } else {
-      // not send
+      // error
 
       setSendingMsg('Message could not be sent');
       setTimeout(() => setSendingMsg(null), 2000);

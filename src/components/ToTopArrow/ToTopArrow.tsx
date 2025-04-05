@@ -4,7 +4,7 @@ import scrollTo from 'gatsby-plugin-smoothscroll';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDoubleUp } from '@fortawesome/free-solid-svg-icons';
-import StyledToTopArrow from './styles';
+import { StyledToTopArrow } from './styles';
 
 const ToTopArrow = () => (
   <StyledToTopArrow>

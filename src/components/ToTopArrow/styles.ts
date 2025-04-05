@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const StyledToTopArrow = styled.div`
+export const StyledToTopArrow = styled.div`
   @keyframes toUp {
     0% {
       transform: translateY(0rem);
@@ -50,5 +50,3 @@ const StyledToTopArrow = styled.div`
     cursor: pointer;
   }
 `;
-
-export default StyledToTopArrow;
