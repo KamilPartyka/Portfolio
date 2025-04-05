@@ -34,7 +34,7 @@ export const theme = {
       return `@media all and (max-width: ${value}px)`;
     },
   },
-  bacelHeight: {
+  bevelHeight: {
     mobile: '3rem',
     desktop: '10rem',
   },

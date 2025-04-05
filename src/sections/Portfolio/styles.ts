@@ -3,11 +3,11 @@ import styled, { css } from 'styled-components';
 export const StyledWrapper = styled.section`
   ${({ theme }) => css`
     margin: 0;
-    margin-top: -${theme.bacelHeight.mobile};
+    margin-top: -${theme.bevelHeight.mobile};
     background-color: ${theme.colors.blue};
 
     ${theme.breakpoints.up('lg')} {
-      margin-top: -${theme.bacelHeight.desktop};
+      margin-top: -${theme.bevelHeight.desktop};
     }
   `}
 `;
@@ -47,7 +47,7 @@ export const StyledInnerWrapper = styled.div`
 
     > div {
       position: relative;
-      padding-top: ${theme.bacelHeight.mobile};
+      padding-top: ${theme.bevelHeight.mobile};
 
       #fileIcon {
         position: absolute;

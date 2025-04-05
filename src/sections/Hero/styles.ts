@@ -7,10 +7,10 @@ export const StyledWrapper = styled.div`
     justify-content: space-around;
     flex-direction: column;
     margin: 0;
-    height: calc(100vh - ${theme.bacelHeight.mobile});
+    height: calc(100vh - ${theme.bevelHeight.mobile});
 
     ${theme.breakpoints.up('lg')} {
-      height: calc(100vh - ${theme.bacelHeight.desktop});
+      height: calc(100vh - ${theme.bevelHeight.desktop});
     }
 
     @media screen and (max-height: 660px) and (orientation: landscape) {

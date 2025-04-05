@@ -3,18 +3,18 @@ import styled, { css } from 'styled-components';
 export const StyledWrapper = styled.section`
   ${({ theme }) => css`
     background-color: ${theme.colors.gray};
-    margin-top: -${theme.bacelHeight.mobile};
+    margin-top: -${theme.bevelHeight.mobile};
     padding-bottom: 2rem;
 
     ${theme.breakpoints.up('lg')} {
-      margin-top: -${theme.bacelHeight.desktop};
+      margin-top: -${theme.bevelHeight.desktop};
     }
   `}
 `;
 
 export const StyledInnerWrapper = styled.div`
   ${({ theme }) => css`
-    padding-top: ${theme.bacelHeight.mobile};
+    padding-top: ${theme.bevelHeight.mobile};
 
     ${theme.breakpoints.up('sm')} {
       margin: 0 4rem;
@@ -27,7 +27,7 @@ export const StyledInnerWrapper = styled.div`
     }
 
     ${theme.breakpoints.up('lg')} {
-      padding-top: calc(${theme.bacelHeight.desktop} + 2rem);
+      padding-top: calc(${theme.bevelHeight.desktop} + 2rem);
     }
   `}
 `;
