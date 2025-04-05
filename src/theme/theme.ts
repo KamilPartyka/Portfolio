@@ -1,6 +1,3 @@
-import React from 'react';
-import { ThemeProvider } from 'styled-components';
-
 type breakpoints = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl';
 
 export const theme = {
@@ -42,9 +39,3 @@ export const theme = {
     desktop: '10rem',
   },
 };
-
-const Theme = ({ children }: { children: React.ReactNode }) => (
-  <ThemeProvider theme={theme}>{children}</ThemeProvider>
-);
-
-export default Theme;

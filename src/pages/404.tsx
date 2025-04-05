@@ -27,7 +27,7 @@ const NotFoundPage = () => (
       alt='error 404'
     />
     <br />
-    <Link to='/'>Back to site</Link>.
+    <Link to='/'>Back to site</Link>
   </StyledWrapper>
 );
 
