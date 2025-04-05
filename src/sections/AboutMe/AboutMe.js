@@ -2,7 +2,7 @@ import React from 'react';
 
 import { StaticImage } from 'gatsby-plugin-image';
 
-import Header from 'components/simple/Header/Header';
+import Header from 'components/Header/Header';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCode } from '@fortawesome/free-solid-svg-icons';
 import { StyledWrapper, StyledInnerWrapper, StyledText } from './styles';
@@ -12,7 +12,7 @@ const AboutMe = () => (
     <StyledInnerWrapper>
       <Header title='About me' />
       <StaticImage
-        src='../../../images/KamilPartyka.jpeg'
+        src='../../images/KamilPartyka.jpeg'
         width={300}
         height={300}
         formats={['webp', 'auto']}

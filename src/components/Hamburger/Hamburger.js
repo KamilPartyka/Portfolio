@@ -2,14 +2,14 @@ import React from 'react';
 
 import PropTypes from 'prop-types';
 
-import { StyledWrapper, StyledHamburger, StyledHamburgeBox, StyledHamburgeBoxInner } from './styles';
+import { StyledWrapper, StyledHamburger, StyledHamburgerBox, StyledHamburgerBoxInner } from './styles';
 
 const Hamburger = ({ callbackFn, isSideNavActive }) => (
   <StyledWrapper>
     <StyledHamburger onClick={() => callbackFn()}>
-      <StyledHamburgeBox>
-        <StyledHamburgeBoxInner isSideNavActive={isSideNavActive} />
-      </StyledHamburgeBox>
+      <StyledHamburgerBox>
+        <StyledHamburgerBoxInner isSideNavActive={isSideNavActive} />
+      </StyledHamburgerBox>
     </StyledHamburger>
   </StyledWrapper>
 );

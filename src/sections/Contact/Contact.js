@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 
-import Bevel from 'components/simple/Bevel/Bevel';
-import Header from 'components/simple/Header/Header';
-import Input from 'components/simple/Input/Input';
+import Bevel from 'components/Bevel/Bevel';
+import Header from 'components/Header/Header';
+import Input from 'components/Input/Input';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
-import StyledButton from 'components/simple/Button/styles';
+import StyledButton from 'components/Button/styles';
 import { StyledWrapper, StyledInnerWrapper, StyledFormWrapper, StyledForm, StyledSend } from './styles';
 
 const Contact = () => {

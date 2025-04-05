@@ -2,7 +2,7 @@ import React from 'react';
 
 import PropTypes from 'prop-types';
 
-import Bevel from 'components/simple/Bevel/Bevel';
+import Bevel from 'components/Bevel/Bevel';
 
 import { StyledWrapper, StyledFooter } from './styles';
 

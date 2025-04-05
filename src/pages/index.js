@@ -5,15 +5,15 @@ import { Helmet } from 'react-helmet';
 import GlobalStyles from 'theme/globalStyles';
 import { InView } from 'react-intersection-observer';
 
-import Hero from 'components/sections/Hero/Hero';
-import AboutMe from 'components/sections/AboutMe/AboutMe';
-import Portfolio from 'components/sections/Portfolio/Portfolio';
-import SideBarNavigation from 'components/simple/SideBarNavigation/SideBarNavigation';
-import ToTopArrow from 'components/simple/ToTopArrow/ToTopArrow';
-import Hamburger from 'components/simple/Hamburger/Hamburger';
-import Contact from 'components/sections/Contact/Contact';
-import Footer from 'components/sections/Footer/Footer';
-import Modal from 'components/simple/Modal/Modal';
+import Hero from 'sections/Hero/Hero';
+import AboutMe from 'sections/AboutMe/AboutMe';
+import Portfolio from 'sections/Portfolio/Portfolio';
+import SideBarNavigation from 'components/SideBarNavigation/SideBarNavigation';
+import ToTopArrow from 'components/ToTopArrow/ToTopArrow';
+import Hamburger from 'components/Hamburger/Hamburger';
+import Contact from 'sections/Contact/Contact';
+import Footer from 'sections/Footer/Footer';
+import Modal from 'components/Modal/Modal';
 
 const IndexPage = () => {
   const [isSideNavActive, setIsSideNavActive] = useState(false);

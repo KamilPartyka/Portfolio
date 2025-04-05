@@ -25,19 +25,20 @@ export const StyledHamburger = styled.button`
   cursor: pointer;
 `;
 
-export const StyledHamburgeBox = styled.span`
+export const StyledHamburgerBox = styled.span`
   width: 3rem;
   height: 2.4rem;
   position: relative;
 `;
-export const StyledHamburgeBoxInner = styled.span`
+
+export const StyledHamburgerBoxInner = styled.span`
   top: 50%;
   transform: translateY(-50%);
   transition: 300ms;
 
   &,
-  ::after,
-  ::before {
+  &::after,
+  &::before {
     width: 100%;
     height: 0.4rem;
     background-color: ${({ theme }) => theme.colors.yellow};
@@ -47,12 +48,12 @@ export const StyledHamburgeBoxInner = styled.span`
     box-shadow: 0 0 3px -1px black;
   }
 
-  ::before {
+  &::before {
     content: '';
     top: -10px;
     transition: 500ms;
   }
-  ::after {
+  &::after {
     content: '';
     top: 10px;
     transition: 500ms;
@@ -62,17 +63,17 @@ export const StyledHamburgeBoxInner = styled.span`
     isSideNavActive &&
     css`
       &,
-      ::before,
-      ::after {
+      &::before,
+      &::after {
         box-shadow: none;
       }
       & {
         background-color: transparent;
       }
-      ::before {
+      &::before {
         transform: translateY(10px) rotate(45deg);
       }
-      ::after {
+      &::after {
         transform: translateY(-10px) rotate(-45deg);
       }
     `}

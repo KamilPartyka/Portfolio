@@ -42,7 +42,7 @@ export const StyledInput = styled.input`
       font-size: 2rem;
     }
 
-    ::placeholder {
+    &::placeholder {
       color: ${theme.colors.blue};
       font-size: 1.7rem;
 
@@ -86,7 +86,7 @@ export const StyledTextarea = styled.textarea`
       font-size: 2rem;
     }
 
-    ::placeholder {
+    &::placeholder {
       color: ${theme.colors.blue};
       font-size: 1.7rem;
 

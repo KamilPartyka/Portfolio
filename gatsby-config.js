@@ -1,4 +1,4 @@
-const config = {
+module.exports = {
   pathPrefix: `/Portfolio`,
   plugins: [
     'gatsby-plugin-styled-components',
@@ -24,5 +24,3 @@ const config = {
     },
   ],
 };
-
-export default config;

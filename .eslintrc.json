@@ -12,11 +12,6 @@
     "sourceType": "module"
   },
   "plugins": ["react"],
-  "rules": {
-    "react/jsx-filename-extension": [1, { "extensions": [".js"] }],
-    "no-unused-expressions": [2, { "allowShortCircuit": true }],
-    "react/function-component-definition": "off"
-  },
   "settings": {
     "import/resolver": {
       "node": {
@@ -35,5 +30,11 @@
     "expect": true,
     "module": true,
     "alert": true
+  },
+  "rules": {
+    "react/jsx-filename-extension": [1, { "extensions": [".js"] }],
+    "no-unused-expressions": [2, { "allowShortCircuit": true }],
+    "react/function-component-definition": "off",
+    "import/prefer-default-export": "off"
   }
 }

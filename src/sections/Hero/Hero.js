@@ -2,8 +2,8 @@ import React from 'react';
 
 import PropTypes from 'prop-types';
 import { StaticImage } from 'gatsby-plugin-image';
-import NavBar from 'components/simple/NavBar/NavBar';
-import Bevel from 'components/simple/Bevel/Bevel';
+import NavBar from 'components/NavBar/NavBar';
+import Bevel from 'components/Bevel/Bevel';
 
 import scrollTo from 'gatsby-plugin-smoothscroll';
 
@@ -13,10 +13,10 @@ import { faEnvelopeSquare, faChevronDown } from '@fortawesome/free-solid-svg-ico
 import { StyledWrapper, StyledContent, StyledIconsWrapper, StyledArrows } from './styles';
 
 const Hero = ({ reference }) => (
-  <>
+  <div style={{ position: 'relative' }}>
     <StaticImage
       id='hero'
-      src='../../../images/hero-bg.png'
+      src='../../images/hero-bg.png'
       backgroundColor='#41A1B1'
       formats={['webp', 'auto']}
       alt='img'
@@ -25,7 +25,7 @@ const Hero = ({ reference }) => (
       style={{
         position: 'absolute',
         width: '100%',
-        height: '110%',
+        height: '100%',
         zIndex: -1,
       }}
     />
@@ -33,7 +33,7 @@ const Hero = ({ reference }) => (
     <StyledWrapper>
       <StyledContent>
         <StaticImage
-          src='../../../images/KamilPartykaAva.jpg'
+          src='../../images/KamilPartykaAva.jpg'
           width={300}
           height={300}
           formats={['webp', 'auto']}
@@ -84,7 +84,7 @@ const Hero = ({ reference }) => (
       </StyledArrows>
     </StyledWrapper>
     <Bevel />
-  </>
+  </div>
 );
 
 Hero.propTypes = {
