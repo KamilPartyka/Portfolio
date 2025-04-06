@@ -35,7 +35,7 @@ const Hero = ({ reference }: HeroProps) => (
     <StyledWrapper>
       <StyledContent>
         <StaticImage
-          src="../../images/KamilPartykaAva.jpg"
+          src="../../images/kamilpartyka.jpg"
           width={300}
           height={300}
           formats={['webp', 'auto']}

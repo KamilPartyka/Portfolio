@@ -8,8 +8,11 @@ export const StyledWrapper = styled.section`
 
 export const StyledInnerWrapper = styled.div`
   ${({ theme }) => css`
+    display: flex;
+    flex-direction: column;
+
     ${theme.breakpoints.up('md')} {
-      min-height: 70vh;D
+      min-height: 70vh;
       max-width: 1520px;
       margin: 0 auto;
       width: 80%;
@@ -20,29 +23,29 @@ export const StyledInnerWrapper = styled.div`
       grid-template-rows: 10rem minmax(30rem, 5fr);
     }
 
-  .gatsby-image-wrapper {
-    margin: 0 auto;
-    width: 80%;
-    max-width: 45rem;
-    filter: drop-shadow(0px 11px 11px rgba(0, 0, 0, 0.25));
-    border-radius: 0.3rem;
+    .gatsby-image-wrapper {
+      margin: 0 auto;
+      width: 80%;
+      max-width: 45rem;
+      filter: drop-shadow(0px 11px 11px rgba(0, 0, 0, 0.25));
+      border-radius: 0.3rem;
 
-    ${theme.breakpoints.up('md')}{
-      grid-column: 2/2;
-      grid-row: 1/3;
+      ${theme.breakpoints.up('md')} {
+        grid-column: 2/2;
+        grid-row: 1/3;
 
-      margin: 0;
-      width: 100%;
-      min-width: 25rem;
-      max-height: 45rem;
+        margin: 0;
+        width: 100%;
+        min-width: 25rem;
+        max-height: 45rem;
+      }
+
+      ${theme.breakpoints.up('xl')} {
+        min-width: 40rem;
+        max-height: 60rem;
+      }
     }
-
-    ${theme.breakpoints.up('xl')} {
-      min-width: 40rem;
-      max-height: 60rem;
-    }
-}
-`}
+  `}
 `;
 
 export const StyledText = styled.div`
@@ -62,7 +65,7 @@ export const StyledText = styled.div`
       line-height: 2.2rem;
       text-align: justify;
       color: ${theme.colors.white};
-      text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
+      text-shadow: 2px 2px 11px rgb(0 0 0 / 50%);
 
       ${theme.breakpoints.up('md')} {
         max-width: 70rem;

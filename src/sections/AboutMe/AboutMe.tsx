@@ -11,9 +11,9 @@ const AboutMe = () => (
     <StyledInnerWrapper>
       <Header title="About me" />
       <StaticImage
-        src="../../images/KamilPartyka.jpeg"
-        width={300}
-        height={300}
+        src="../../images/kamilpartyka.jpg"
+        width={400}
+        height={600}
         formats={['webp', 'auto']}
         alt="img"
         quality={100}
@@ -21,15 +21,27 @@ const AboutMe = () => (
       />
       <StyledText>
         <p>
-          Hello, I&apos;m Kamil Partyka, I&apos;m interested in technology, street photography,
-          portrait photography and front-end technologies that I&apos;ve been learning for over a
-          year.
-          <br />
-          I am familiar with semantic HTML5 and CSS. I know BEM methodology, JavaScript basics with
-          ES6+ elements, ReactJS and GatsbyJS basics with Styled Components or CSS Modules. I can
-          also use Git version control system (GitHub, GitLab).
-          <br />I believe that a full-time job as a front-end developer will allow me to further
-          develop my skills in front-end technologies, communication and design.
+          Front-End Developer with a strong focus on performance, scalability, and SEO, leveraging
+          modern technologies like TypeScript and React-based frameworks.
+        </p>
+        <br />
+        <p>
+          I’ve worked across a variety of projects — from small-scale web applications to
+          large-scale e-commerce platforms — where I was responsible for delivering new features,
+          optimizing existing code, and ensuring long-term maintainability.
+        </p>
+        <br />
+        <p>
+          My experience spans complex refactoring efforts, legacy code migrations, dependency
+          updates (e.g., major Node.js versions), and rewriting outdated test suites. I’m
+          particularly passionate about clean code and forward-compatible solutions.
+        </p>
+        <br />
+        <p>
+          Beyond development, I actively contribute to company culture and team growth. I’ve
+          organized internal events, hosted public workshops, facilitated agile processes (daily
+          stand-ups, sprint plannings, retrospectives), and participated in recruiting new front-end
+          talents.
         </p>
         <FontAwesomeIcon id="codeIcon" icon={faCode} />
       </StyledText>
