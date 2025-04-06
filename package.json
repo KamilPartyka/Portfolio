@@ -17,7 +17,6 @@
     "format:check": "prettier --check .",
     "deploy": "npm run build:production && gh-pages -d public"
   },
-  "type": "module",
   "engines": {
     "node": ">=22"
   },
