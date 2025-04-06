@@ -1,20 +1,13 @@
 import React from 'react';
 
-import {
-  StyledLabel,
-  StyledInput,
-  StyledTextarea,
-  StyledErrorMsg,
-} from './styles';
+import { StyledLabel, StyledInput, StyledTextarea, StyledErrorMsg } from './styles';
 
 interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   isTextarea?: boolean;
   label: string;
   maxLength?: number;
   errorMsg?: string;
-  onChange: (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => void;
+  onChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
 }
 
 const Input = ({

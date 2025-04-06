@@ -1,11 +1,10 @@
+import { faHeart } from '@fortawesome/free-regular-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeart } from '@fortawesome/free-regular-svg-icons';
-import { StyledButton } from '../Button/styles';
-
 import { StyledModalWrapper, StyledModal } from './styles';
-import { StaticImage } from 'gatsby-plugin-image';
+import { StyledButton } from '../Button/styles';
 
 interface ModalProps {
   callbackFn: () => void;
@@ -16,11 +15,11 @@ const Modal = ({ callbackFn }: ModalProps) => (
     <StyledModal>
       <h2>It&apos;s a Secret to Everybody.</h2>
       <StaticImage
-        src='../../images/rupee.png'
-        alt='Rupee'
-        title='Rupee'
-        placeholder='blurred'
-        layout='fixed'
+        src="../../images/rupee.png"
+        alt="Rupee"
+        title="Rupee"
+        placeholder="blurred"
+        layout="fixed"
         width={50}
         height={100}
         quality={100}

@@ -6,8 +6,6 @@ interface ButtonProps {
   children: React.ReactNode | React.ReactNode[];
 }
 
-const Button = ({ children }: ButtonProps) => (
-  <StyledButton>{children}</StyledButton>
-);
+const Button = ({ children }: ButtonProps) => <StyledButton>{children}</StyledButton>;
 
 export default Button;

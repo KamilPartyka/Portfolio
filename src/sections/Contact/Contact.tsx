@@ -1,12 +1,11 @@
-import React, { ChangeEvent, useState } from 'react';
-
+import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Bevel from 'components/Bevel';
+import { StyledButton } from 'components/Button/styles';
 import Header from 'components/Header';
 import Input from 'components/Input';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
-import { StyledButton } from 'components/Button/styles';
+import React, { ChangeEvent, useState } from 'react';
 import {
   StyledWrapper,
   StyledInnerWrapper,
@@ -53,8 +52,8 @@ const Contact = () => {
       email: '',
       message: '',
     };
-
     const pattern = new RegExp(
+      // eslint-disable-next-line no-useless-escape
       /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
     ); // from https://emailregex.com/
 
@@ -104,38 +103,32 @@ const Contact = () => {
 
   return (
     <>
-      <Bevel
-        color='blue'
-        isReverse
-      />
-      <StyledWrapper id='contact'>
+      <Bevel color="blue" isReverse />
+      <StyledWrapper id="contact">
         <StyledInnerWrapper>
-          <Header title='Contact' />
+          <Header title="Contact" />
           <StyledFormWrapper>
-            <StyledForm
-              onSubmit={handleFormSubmit}
-              autoComplete='off'
-            >
+            <StyledForm onSubmit={handleFormSubmit} autoComplete="off">
               <Input
-                label='Your mail:'
-                name='email'
-                placeholder='Please write mail to response'
+                label="Your mail:"
+                name="email"
+                placeholder="Please write mail to response"
                 onChange={handleInputChange}
                 value={formState.fields.email}
                 errorMsg={formState.errors.email}
               />
               <Input
                 isTextarea
-                label='How can I help You?'
-                name='message'
-                placeholder='Please write your message here'
+                label="How can I help You?"
+                name="message"
+                placeholder="Please write your message here"
                 maxLength={250}
                 onChange={handleInputChange}
                 value={formState.fields.message}
                 errorMsg={formState.errors.message}
               />
 
-              <StyledButton type='submit'>Submit</StyledButton>
+              <StyledButton type="submit">Submit</StyledButton>
               {sendingMsg ? (
                 <StyledSend>
                   <h2>{sendingMsg}</h2>

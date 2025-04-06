@@ -1,5 +1,5 @@
-import * as React from 'react';
 import { Link } from 'gatsby';
+import * as React from 'react';
 
 import styled from 'styled-components';
 
@@ -22,12 +22,9 @@ const StyledWrapper = styled.div`
 
 const NotFoundPage = () => (
   <StyledWrapper>
-    <img
-      src='https://i.giphy.com/media/joV1k1sNOT5xC/giphy.webp'
-      alt='error 404'
-    />
+    <img src="https://i.giphy.com/media/joV1k1sNOT5xC/giphy.webp" alt="error 404" />
     <br />
-    <Link to='/'>Back to site</Link>
+    <Link to="/">Back to site</Link>
   </StyledWrapper>
 );
 

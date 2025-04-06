@@ -8,10 +8,7 @@ interface BevelProps {
 }
 
 const Bevel = ({ isReverse = false, color }: BevelProps) => (
-  <StyledBevel
-    isReverse={isReverse}
-    color={color}
-  />
+  <StyledBevel isReverse={isReverse} color={color} />
 );
 
 export default Bevel;

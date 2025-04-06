@@ -1,21 +1,14 @@
-import React from 'react';
-
-import { graphql, useStaticQuery } from 'gatsby';
-
+import { faFileCode } from '@fortawesome/free-regular-svg-icons';
+import { faLaptopCode } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Bevel from 'components/Bevel';
 import Header from 'components/Header';
 import PortfolioBox from 'components/PortfolioBox';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFileCode } from '@fortawesome/free-regular-svg-icons';
-import { faLaptopCode } from '@fortawesome/free-solid-svg-icons';
-import {
-  StyledWrapper,
-  StyledInnerWrapper,
-  StyledItemsWrapper,
-  StyledSvgWrapper,
-} from './styles';
+import { graphql, useStaticQuery } from 'gatsby';
 import { IGatsbyImageData } from 'gatsby-plugin-image';
+import React from 'react';
+import { StyledWrapper, StyledInnerWrapper, StyledItemsWrapper, StyledSvgWrapper } from './styles';
 
 type PortfolioItem = {
   id: string;
@@ -48,21 +41,12 @@ const Portfolio = () => {
 
   return (
     <>
-      <Bevel
-        color='gray'
-        isReverse
-      />
+      <Bevel color="gray" isReverse />
       <StyledWrapper>
         <StyledInnerWrapper>
-          <div id='portfolio'>
-            <Header
-              secondary
-              title='Portfolio'
-            />
-            <FontAwesomeIcon
-              id='fileIcon'
-              icon={faFileCode}
-            />
+          <div id="portfolio">
+            <Header secondary title="Portfolio" />
+            <FontAwesomeIcon id="fileIcon" icon={faFileCode} />
           </div>
           <StyledItemsWrapper>
             {portfolioItemsArr.map((item) => {
@@ -81,10 +65,7 @@ const Portfolio = () => {
           </StyledItemsWrapper>
         </StyledInnerWrapper>
         <StyledSvgWrapper>
-          <FontAwesomeIcon
-            id='fileIcon'
-            icon={faLaptopCode}
-          />
+          <FontAwesomeIcon id="fileIcon" icon={faLaptopCode} />
         </StyledSvgWrapper>
       </StyledWrapper>
     </>
